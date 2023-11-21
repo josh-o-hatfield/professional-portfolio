@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+<!-- Page title for homepage -->
+{% block title %}Good Vibes Yoga{% endblock %}
+
+{% block content %}
+    <div class="container">
+
+        <!-- Logo created using canva.com -->
+        <img class="d-block mx-auto mb-4" src="{{url_for('static', filename='images/' + 'good-vibes.png')}}" alt="good vibes yoga image" width="175" height="175">
+        
+        <!-- First Bootstrap "heroes" template used from: 
+        https://getbootstrap.com/docs/5.1/examples/heroes/ -->
+        <h1 class="mb-3 display-5 fw-bold text-center">Good Vibes Yoga</h1>
+        <div class="col-md-9 col-lg-9 col-xl-9 mx-auto">
+            <p class="text-left lead mb-3">Good Vibes Yoga is an up and 
+                coming yoga company with facilities currently being opened all 
+                around the US. For this site, we have included a list of 
+                yoga classes we hope to offer in the coming months, and 
+                if you're ever curious as to what they offer, you can 
+                gauge further information on them by clicking their links 
+                on the Classes tab.
+            </p>
+            <p class="text-left lead mb-4">You also have the ability to 
+                add, edit, and delete classes for your convenience so that 
+                you have a good idea of which classes are available and 
+                what types of information they include. Head on over to 
+                the Classes tab to begin your journey as a Good Vibes Yoga 
+                master!
+            </p>
+
+            <!-- Button that navigates to the classes page when clicked on -->
+            <a href="{{url_for('classes')}}" type="button" class="mb-4 btn btn-primary px-4 gap-3">Yoga Classes</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+<!-- Page title for adding a class -->
+{% block title %}Add a Class{% endblock %}
+
+{% block content %}
+
+<!-- To ensure that the class_form.html template opens from the edit
+and create routes, I used a simple if statement that determines whether
+the <class_id> is defined or not. Whenever it is NOT defined, where 
+y_class == None, the template opens a new form for the user to add a yoga
+class. Oppositely, if <class_id> is already defined from the edit route, 
+then y_class will exist; the form is copied over twice, with one being 
+empty and the other containing the csv values that were previously input -->
+{% if y_class == None %}
+
+    <!-- Here, we initiate the function and method type so that once a
+    user completes a form, the function links to the set_classes function -->
+    <form action="{{url_for('create_class')}}" method="POST" id="create_class" name="create_class">
+        
+        <!-- Label and input for class date -->
+            <!-- *Note: I required the class date, duration, and name
+            fields so that they would fully display on the classes route
+            after adding a class. The other fields are optional -->
+        <div class="form-group row mb-3">
+            <label for="date" class="fw-bold text-xl-end col-sm-3 col-form-label">Date:</label>
+            <div class="col-sm-4 col-xl-3">
+                <input class="form-control" type="text" id="date" name="date" required>
+            </div>
+        </div>
+
+        <!-- Label and input for class name -->
+            <!-- *Note: I required the class date, duration, and name
+            fields so that they would fully display on the classes route
+            after adding a class. The other fields are optional -->
+        <div class="form-group row mb-3">
+            <label for="name" class="fw-bold text-xl-end col-sm-3 col-form-label">Class Name:</label>
+            <div class="col-sm-9">
+                <input class="form-control" type="text" id="name" name="name" required>
+            </div>
+        </div>
+
+        <!-- Label and input for class duration -->
+            <!-- *Note: I required the class date, duration, and name
+            fields so that they would fully display on the classes route
+            after adding a class. The other fields are optional -->
+        <div class="form-group row mb-3">
+            <label for="duration" class="fw-bold text-xl-end col-sm-3 col-form-label">Duration:</label>
+            <div class="col-sm-9">
+                <input class="form-control" type="text" id="duration" name="duration" required></textarea>
+            </div>
+        </div>
+
+        <!-- Label and input for class type -->
+        <div class="form-group row mb-3">
+            <label for="type" class="fw-bold text-xl-end col-sm-3 col-form-label">Type:</label>
+            <div class="col-sm-9">    
+                <input class="form-control" type="text" id="type" name="type">
+            </div>
+        </div>
+
+        <!-- Label and dropdown menu for class levels -->
+        <div class="form-group row mb-3">
+            <label for="level" class="fw-bold text-xl-end col-sm-3 col-form-label">Level:</label>
+            <div class="col-sm-4 col-xl-2">
+                <select class="form-select" aria-label="class level" id="level" name="level">
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Expert</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Label and input for class trainer -->
+        <div class="form-group row mb-3">
+            <label for="trainer" class="fw-bold text-xl-end col-sm-3 col-form-label">Trainer:</label>
+            <div class="col-sm-9">
+                <input class="form-control" type="text" id="trainer" name="trainer">
+            </div>
+        </div>
+
+        <!-- Label and input for class description -->
+        <div class="form-group row mb-3">
+            <label for="description" class="fw-bold text-xl-end col-sm-3 col-form-label">Description:</label>
+            <div class="col-sm-9">
+                <textarea class="form-control" type="text" id="description" name="description"></textarea>
+            </div>
+        </div>
+
+        <!-- Two buttons to reset or save a class -->
+        <button style="margin:3px" class="btn btn-secondary float-end" type="reset" value="Reset">Reset</button>
+        <button style="margin:3px" class="btn btn-primary float-end" type="submit" value="Save">Save</button>
+    </form>
+
+
+{% else %}
+    <!-- Same form as above, only with data pulled in from the classes.csv
+    file for the y_class (or <class_id>) associated with a specific class -->
+    <form action="{{url_for('edit_class', class_id=y_class['name'])}}" method="POST" id="edit_class" name="edit_class">
+        
+        <!-- Label and input for class date -->
+        <div class="form-group row mb-3">
+            <label for="date" class="fw-bold text-xl-end col-sm-3 col-form-label">Date:</label>
+            <div class="col-sm-4 col-xl-3">
+                <input class="form-control" type="text" id="date" name="date" value="{{y_class['date']}}" required>
+            </div>
+        </div>
+        
+        <!-- Label and input for class name -->
+        <div class="form-group row mb-3">
+            <label for="name" class="fw-bold text-xl-end col-sm-3 col-form-label">Class Name:</label>
+            <div class="col-sm-9">
+                <input class="form-control" type="text" id="name" name="name" value="{{y_class['name']}}" required>
+            </div>
+        </div>
+        
+        <!-- Label and input for class duration -->
+        <div class="form-group row mb-3">
+            <label for="duration" class="fw-bold text-xl-end col-sm-3 col-form-label">Duration:</label>
+            <div class="col-sm-9">
+                <input class="form-control" type="text" id="duration" name="duration" value="{{y_class['duration']}}" required></textarea>
+            </div>
+        </div>
+        
+        <!-- Label and input for class type -->
+        <div class="form-group row mb-3">
+            <label for="type" class="fw-bold text-xl-end col-sm-3 col-form-label">Type:</label>
+            <div class="col-sm-9">    
+                <input class="form-control" type="text" id="type" name="type" value="{{y_class['type']}}">
+            </div>
+        </div>
+        
+        <!-- Label and dropdown menu for class levels -->
+        <div class="form-group row mb-3">
+            <label for="level" class="fw-bold text-xl-end col-sm-3 col-form-label">Level:</label>
+            <div class="col-sm-4 col-xl-2">
+                <select class="form-select" aria-label="class level" id="level" name="level" value="{{y_class['level']}}">
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Expert</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Label and input for class trainer -->
+        <div class="form-group row mb-3">
+            <label for="trainer" class="fw-bold text-xl-end col-sm-3 col-form-label">Trainer:</label>
+            <div class="col-sm-9">
+                <input class="form-control" type="text" id="trainer" name="trainer" value="{{y_class['trainer']}}">
+            </div>
+        </div>
+        
+        <!-- Label and input for class description -->
+        <div class="form-group row mb-3">
+            <label for="description" class="fw-bold text-xl-end col-sm-3 col-form-label">Description:</label>
+            <div class="col-sm-9">
+                <textarea class="form-control" type="text" id="description" name="description">{{y_class['description']}}</textarea>
+            </div>
+        </div>
+
+        <!-- Two buttons to reset or save a class -->
+            <!-- *Note: Having set the yoga class values as 
+            value="class, date, etc" in the form, resetting the form can
+            only reset back to what was already submitted as these values.
+            I could not find a way to mitigate this issue and reset the form
+            entirely -->
+        <button style="margin:3px" class="btn btn-secondary float-end" type="reset" value="Reset">Reset</button>
+        <button id="save_button" name="save_button" class="mb-3 btn btn-primary px-4 gap-4 float-end" value="Save">Save</button>
+    </form>
+{% endif %}
+
+{% endblock %}

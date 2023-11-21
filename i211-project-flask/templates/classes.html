@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+<!-- Page title for the list of yoga classes -->
+{% block title %}Yoga Classes{% endblock %}
+
+{% block content %}   
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 mx-auto">
+                <!-- Header for page -->
+                <h2 class="mb-3 float-start">Good Vibes Yoga Classes</h2>
+                
+                <table class="table table-striped">
+                
+                    <!-- Table that establishes table headers as class 
+                    dates names, and durations -->
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Class Name</th>
+                            <th scope="col">Duration</th>
+                        </tr>
+                    </thead>
+
+                    <!-- The table content is grabbed from the dictionary
+                    established in the get_classes() function and goes
+                    through every element in the dictionary to display
+                    content for each class. To make the class names
+                    link to their individual class pages, we use an href
+                    tag to identify whenever a <class_id> is established, 
+                    which renders the template for that class rather than
+                    the /classes route. -->
+                    <tbody>
+                        {% for yoga_class in yoga_classes %}
+                            <tr>
+                                <td>{{yoga_classes[yoga_class]['date']}}</td>
+                                <td><a href="{{url_for('classes', class_id=yoga_class)}}">{{yoga_classes[yoga_class]['name']}}</a></td>
+                                <td>{{yoga_classes[yoga_class]['duration']}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <!-- Button that allows a user to add a class directly 
+                from the classes page -->
+                <a href="{{url_for('create_class')}}" class="mb-3 btn btn-primary float-end" tabindex="-1" role="button" aria-disabled="Add a class!">Add a class!</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

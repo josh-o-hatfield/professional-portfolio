@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+<!-- Page title for deleting classes -->
+{% block title %} Delete {{y_class['name']}}{% endblock %}
+
+{% block content %}
+<div class="row-sm-12 mb-3">
+
+    <!-- This form is very similar to the class route, but now we include
+    two buttons on the bottom that either reroutes to the previous class 
+    page if a user does not wish to delete a class or a confirmation 
+    button to actually delete a class. The form action also differentiates
+    between buttons by setting the confirmation button to POST. -->
+    <form action="{{url_for('delete_class', class_id=y_class)}}" id="delete_class" name="delete_class">
+        <h1 class="text-danger fw-bold">Delete This Yoga Class?</h1>
+
+        <!-- Like the page title, we can change the header depending on
+        the <class_id> -->
+        <h2>{{y_class['name']}}</h2>
+
+        <div class="row mb-3">
+            
+            <!-- Column that displays the parameters/fields for the class -->
+            <div class="col">
+                <p class="fw-bold m-0">Date:</p>
+                <p class="fw-bold m-0">Duration:</p>
+                <p class="fw-bold m-0">Yoga Type:</p>
+                <p class="fw-bold m-0">Yoga Level:</p>
+                <p class="fw-bold m-0">Trainer:</p>
+                <p class="fw-bold m-0">Description:</p>
+            </div>
+
+            <!-- Column that displays what the user had input for a class -->
+            <div class="col">
+                <p class="m-0">{{y_class['date']}}</p>
+                <p class="m-0">{{y_class['duration']}}</p>
+                <p class="m-0">{{y_class['type']}}</p>
+                <p class="m-0">{{y_class['level']}}</p>
+                <p class="m-0">{{y_class['trainer']}}</p>
+                <p class="m-0">{{y_class['description']}}</p>
+            </div>
+        </div>
+
+        <!-- Button that allows the user to reroute back to the class
+        page previously visited -->
+        <a href="{{url_for('classes', class_id=y_class['name'])}}" type="button" style="margin-right:5px" class="mb-3 btn btn-primary px-4 gap-4">Back to Class</a>
+    </form>
+    
+    <!-- It was essential to differentiate buttons so that one would
+    reroute while the other would proceed with the function and delete the
+    entry from the classes.csv file. We can accomplish this by establishing
+    the buttons as two different methods so that we can include if
+    statements/computations in the delete_class function -->
+        <!-- *Note: I was not able to figure out how to reposition the
+        confirmation button after making it its own form -->
+    <form action="{{url_for('delete_class', class_id=y_class['name'])}}" method="POST" id="confirm_delete_class" name="confirm_delete_class">
+        <button id="delete_button" name="delete_button" class="mb-3 btn btn-danger px-4 gap-4">Confirm Delete!</button>
+    </form>
+</div>
+
+{% endblock %}
