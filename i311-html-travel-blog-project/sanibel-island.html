@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+	This HTML page entails an example individual destination of the Final Project, containing a combination of HTML and 
+	CSS to add responsive design to the frontend as well as implement one plugin on the page: 
+	1) navigation bar. Both flexbox and media queries are utilized for setting flexible pages based 
+	on viewport size.
+
+    @author     Josh Hatfield
+    @professor  Professor Lee
+    @course     INFO-I 360 (Section 8019) | Final Project
+    @date       5/2/2023
+-->
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Odyssey Atlas | Sanibel Island</title>
+
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" href="css/normalize.css">
+
+	<!-- Leaflet Plugin Attribution: https://leafletjs.com/examples/quick-start/
+	Leaflet plugin created by Volodymyr Agafonkin -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+		integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+	<!-- Google font for navbar plugin -->
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- Playfair Display font -->
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+		rel="stylesheet">
+	<!-- Quattrocento font -->
+	<link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+	<!-- Karla font -->
+	<link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+
+	<!-- Custom Styles -->
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+	<!-- HEADER  -->
+	<header>
+		<!-- NAVIGATION -->
+		<nav id="mySidenav" class="sidenav">
+			<ul>
+				<li><a class="closebtn">&times;</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="destinations.html">Destinations</a></li>
+				<li><a href="resources.html">Resources</a></li>
+			</ul>
+		</nav>
+
+		<!-- Open the sidenav with text -->
+		<div class="openbtn">
+			<span class="material-symbols-outlined menu-button">menu</span>
+			<span class="menu-text">menu</span>
+		</div>
+
+		<div class="all-over-bkg"></div>
+
+		<div class="header-styling">
+			<!-- Waves and logo created using free assets on canva.com  -->
+			<img class="waves1" src="images/waves1.png" alt="waves styling">
+			<a href="index.html"><img class="logo" src="images/odyssey_atlas.png" alt="Oddsey Atlas Logo"></a>
+			<img class="waves2" src="images/waves2.png" alt="waves styling">
+		</div>
+	</header>
+
+	<!-- **************************************************************************** -->
+
+	<!-- MAIN CONTENT -->
+	<main>
+
+		<!-- Article 1 with max width container set -->
+		<article class="destination-info">
+			<div class="container3">
+				<h1>Sanibel Island, FL <a class="back-btn" href="destinations.html">Back to Destinations</a></h1>
+				<!-- Flexes the map with the overview information on one row -->
+				<section class="flex2">
+					<div class="left2">
+						<div class="map-container">
+							<!-- Map integration using Leaflet -->
+							<div id="map"></div>
+						</div>
+					</div>
+					<div class="right2">
+						<div class="overview">
+							<h1>Overview</h1>
+							<p>Sanibel Island is one of my most favorite frequented destinations due to its vibrant
+								range of colors, local identity, and generally nice weather year-round. Nearly all the
+								shops, ranging from ice cream to art to dining, are locally operated and provide a
+								pleasant escape from the various chains that are sometimes too ubiquitous in many other
+								areas.
+							</p>
+							<p>While this destination can be quite expensive to stay at, the experiences are certainly
+								worthwhile, and there tends to be enough flexibility in terms of rooming options to
+								lower the cost of one's stay if planned in advance. Overall, for anyone looking for an
+								alternative to other destinations like the Bahamas or even other localities in Florida,
+								I would highly recommend Sanibel Island for your next stay!</p>
+						</div>
+					</div>
+				</section>
+			</div>
+		</article>
+
+		<!-- Blue dotted line -->
+		<div class="line3"></div>
+
+		<!-- Article 2 with max width container set -->
+		<article>
+			<div class="container3 favorites">
+				<h1>Favorite Things to Do</h1>
+				<!-- Flexes text with pelican image on one row -->
+				<section class="favorites-flex">
+					<div class="favorites-text1">
+						<p>Sanibel Island has a wide range of biodiversity due to the vastly untouched parts of the
+							island for conservation. After taking a guided fishing trip to various locations around
+							Sanibel Island, such as the pier, areas adjacent to the Causeway, and popular ecosystems
+							outside of Captiva (north of Sanibel Island), we were able to ecstatically catch a few
+							sharks and even see dolphins cruising behind ships!</p>
+						<p>On the boat dock as visualized, several pelicans would boisterously crowd around those who
+							returned with fish, which was peculiar yet very amusing to see. Even for those not watching
+							to fish, Sanibel Island offers several excursions similar like kayaking, where our group was
+							able to paddle by multiple manatees floating near the surface!</p>
+					</div>
+					<img class="pelican" src="images/pelican.jpg" alt="Pelican on Dock, 2020"
+						title="Pelican on Dock, 2020">
+				</section>
+				<!-- Flexes text with dog image on one row; switches row using row-reverse -->
+				<section class="favorites-flex2">
+					<div class="favorites-text2">
+						<p>Beyond this, Sanibel Island's natural beauty ensures a sense of familiarity yet diversity for
+							every
+							subsequent visit, regardless of the part of the island experienced. For instance, shells are
+							naturally clustered due to the large amount of the coast facing south, thereby causing daily
+							rain and other events to push the shells with perfect ubiquity across the coast. The sand is
+							also a very soft and granular material, and you'd be hard to not find runners every morning
+							due to the perfect length of the coast for a nice morning run. Overall, spending time at the
+							beach always feels rejuvenating and manageable to due to the aforementioned smaller size of
+							the coast.</p>
+						<p>In terms of dining, Sanibel Island, as noted, mostly contains locally operated restaurants,
+							which tends to incentivize more variety and higher quality meals for tourists. Nearly every
+							food, ranging from pizza to seafood to breakfast, all encompass Sanibel Island's selections
+							and certainly my own personal recommendations from my visits. This emphasis on locality
+							makes Sanibel Island one of the most destinations in the world in this regard!</p>
+					</div>
+					<img class="dog" src="images/dog.jpg" alt="My Scottie Terrier Walking on the Beach, 2020"
+						title="My Scottie Terrier Walking on the Beach, 2020">
+				</section>
+			</div>
+		</article>
+
+		<!-- Blue dotted line -->
+		<div class="line4"></div>
+
+		<!-- Article 3 with max width container set -->
+		<article>
+			<div class="container3 tips">
+				<h1>Tips</h1>
+				<section>
+					<p>Below, I've included a few potentially good-to-know tips that can assist you with familiarizing
+						with Sanibel Island and a few of its intracacies:</p>
+					<ul>
+						<li>Whenever you want to travel across the Causeway into Sanibel Island, you'll have to pay a
+							subsidiary toll fee that can quickly add up if not considered. Buying groceries is cheaper
+							off the island, but I would recommend stocking up half or least all of the groceries you'll
+							need at chains like Publix or Walmart before making another trip.</li>
+						<li>You can find dolphins and manatees swimming quite close to the shores at times; I had more
+							success when finding places near the lighhouse, and time of day isn't much of a factor
+							unless there's a considerable amount of tourists residing further out in the water.</li>
+						<li>Restaurants become increasingly packed from 6-8pm, regardless of the day of the week. Early
+							dinners may be advised so that you avoid these crowds, receive more early-bird specials, and
+							have opportunities to do other time-sensitive activities that may otherwise be closed later
+							on during these meal times.</li>
+						<li>The southeastern part of the island tends to offer cheaper hotel prices than the west side
+							due to its proximity to Captiva. Many houses also rent out through local vacation rental
+							services, which can offer one month housing stay prices comparable to much shorter one week
+							cruises.</li>
+					</ul>
+				</section>
+			</div>
+		</article>
+
+		<!-- FOOTER -->
+		<footer>
+			<div class="footer-container">
+				<section class="social-media">
+					<h2>Social Media</h2>
+					<div class="social">
+						<!-- Default social media icons -->
+						<p>Instagram<a href="#" title="Instagram Link"><span
+									class="material-symbols-outlined instagram">heart_plus</span></a></p>
+						<p>LinkedIn<a href="#" title="LinkedIn Link"><span
+									class="material-symbols-outlined linkedin">swipe_right</span></a></p>
+						<p>Twitter<a href="#" title="Twitter Link"><span
+									class="material-symbols-outlined twitter">group</span></a></p>
+					</div>
+				</section>
+				<section>
+					<h2>Contact Me</h2>
+					<p>Email Address: <a href="mailto:jhatfie@iu.edu"
+							title="Email to: jhatfie@iu.edu">jhatfie@iu.edu</a></p>
+					<p>Phone Number: (123) 456-7890</p>
+				</section>
+			</div>
+		</footer>
+	</main>
+
+	<!-- **************************************************************************** -->
+
+	<!-- JAVASCRIPT -->
+	<!-- Leaflet JavaScript source; attribution in <head> for link and author -->
+	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+		integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+	<!-- Responsive side push navigation w/ opacity in nav.js file -->
+	<script src="js/nav.js"></script>
+
+</body>
+
+</html>

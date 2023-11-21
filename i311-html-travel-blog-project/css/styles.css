@@ -1,0 +1,1142 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  NATURAL BOX MODEL
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+html {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* PAGE THEME COLORS - PLEASE USE */
+:root {
+    --navbar: #4f7ab3;
+    --slideshow-div: #2d4666;
+    --background: #aecbeb;
+    --article: #659de6;
+    --footer: #41536b;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  GENERAL
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+body {
+    margin: 0;
+    background-color: #ebf2fc;
+    height: 100%;
+    width: 100%;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  TYPOGRAPHY
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+h1, h2, h3, h4, h5, h6, p, li, a, td, figcaption {
+    /* adjusted line-height */
+    line-height: 1.5em;
+}
+
+/* All font sizes here account for mobile design */
+
+/* Main headers */
+h1 {
+    margin-bottom: -5px;
+    font-size: 36px;
+    padding: 0 0 0 0;
+    font-family: 'Playfair Display', serif;
+    color: #5783bd;
+}
+
+/* Subheaders */
+h2 {
+    font-family: 'Karla', sans-serif;
+    font-size: 24px;
+}
+
+/* Other typography content */
+p, a, li, label {
+    font-family: 'Quattrocento', serif;
+    font-size: 18px;
+}
+
+/* HOMEPAGE */
+/* Homepage first article paragraph color change */
+.introduction p {
+    color: white;
+}
+
+/* Homepage third article paragraph color change */
+.resources p {
+    color: white;
+}
+
+
+/* ABOUT PAGE */
+.right h1 {
+    margin-bottom: 20px;
+}
+
+.right ul li {
+    /* Manually reset bulleted list */
+    list-style-type: disc;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.contact-me h1 {
+    margin-top: -10px;
+}
+
+
+/* INDIVIDUAL DESTINATION PAGE */
+.destination-h1 {
+    display: block;
+}
+
+.overview h1 {
+    /* Secondary H1 for overview on individual destination page with smaller font size */
+    color: black;
+    font-size: 30px;
+    margin-bottom: -10px;
+}
+
+.favorites h1 {
+    /* Secondary H1 for favorite things to do on individual destination page with smaller font size */
+    color: black;
+    font-size: 30px;
+    margin-bottom: -10px;
+    margin-top: -5px;
+}
+
+.tips h1 {
+    /* Secondary H1 for tips on individual destination page with smaller font size */
+    color: black;
+    font-size: 30px;
+    margin-top: -5px;
+    margin-bottom: -10px;
+}
+
+.tips ul li {
+    /* Resets overwritten bulleted list options */
+    list-style-type: disc;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+
+/* RESOURCES PAGE */
+.resources-container ul li {
+    /* Resets overwritten bulleted list options */
+    list-style-type: disc;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+.resources-container h2 {
+    margin-bottom: -8px;
+}
+
+
+/* FOOTER */
+footer h2 {
+    color: white;
+}
+
+footer p {
+    color: white;
+    margin-bottom: -5px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  BUTTONS, LINKS, & IMAGES
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* HOMEPAGE */
+.video-overlay h1 {
+    color: white;
+    font-size: 28px;
+}
+
+.video-overlay h1:hover {
+    color: var(--article);   
+}
+
+.video-overlay a {
+    /* Remove underline from slideshow links */
+    text-decoration: none;
+}
+
+/* Clip Path attribution: https://bennettfeely.com/clippy/ 
+Clip path property made by Bennett Feely */
+.intro-picture {
+    background: url('../images/profile2.jpg');
+    background-position: center;
+    /* Width and height set */
+    height: 200px;
+    width: 200px;
+    /* Border radius to create circle clip */
+    border-radius: 50%;
+    /* Cover image to circle */
+    background-size: cover;
+    /* Add a border */
+    border: 3px solid #5783bd;
+    /* Center image to container */
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: -5px;
+}
+
+/* Homepage button for about me */
+.about-me-btn {
+    display: block;
+    /* Specified width, height, and font size */
+    width: 250px;
+	height: 60px;
+    font-size: 28px;
+    padding: 8px;
+    /* Default button color */
+	background-color: #006298;
+	text-align: center;
+    /* Increased border radius */
+	border-radius: 10px;
+	border: 2px solid #4f7ab3;
+    /* Text automatically set to white */
+	color: white;
+    /* Remove underlined text on button */
+	text-decoration: none;
+    /* Center button to container */
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: -20px;
+}
+
+.about-me-btn:hover {
+    /* Change text, border, and background color on hover */
+    color: white;
+    background-color: #00AA88;
+    border: 2px solid var(--footer);
+}
+
+/* Homepage second article image */
+.destination-picture {
+    display: block;
+    /* Center image to container */
+    margin: 0 auto;
+    margin-top: 12px;
+    /* Specify height and width */
+    width: 400px;
+    height: auto;
+    /* Added box shadow to image */
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.221);
+}
+
+.destinations-btn {
+    display: block;
+    /* Specified width, height, and font size */
+    width: 250px;
+	height: 60px;
+    font-size: 28px;
+    padding: 8px;
+    /* Default button color */
+	background-color: #006298;
+	text-align: center;
+    /* Increased border radius */
+	border-radius: 10px;
+	border: 2px solid var(--footer);
+    /* Text automatically set to white */
+	color: white;
+    /* Remove underlined text on button */
+	text-decoration: none;
+    /* Center button to container */
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: -20px;
+}
+
+.destinations-btn:hover {
+    /* Change text and background color on hover */
+    color: white;
+    background-color: #00AA88;
+}
+
+.resources-btn {
+    display: block;
+    /* Specified width, height, and font size */
+    width: 250px;
+	height: 60px;
+    font-size: 28px;
+    padding: 8px;
+    /* Default button color */
+	background-color: #006298;
+	text-align: center;
+    /* Increased border radius */
+	border-radius: 10px;
+	border: 2px solid #4f7ab3;
+    /* Text automatically set to white */
+	color: white;
+    /* Remove underlined text on button */
+	text-decoration: none;
+    /* Center button to container */
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: -20px;
+}
+
+.resources-btn:hover {
+    /* Change text, border, and background color on hover */
+    color: white;
+    background-color: #00AA88;
+    border: 2px solid var(--footer);
+}
+
+
+/* ABOUT PAGE */
+.about-img {
+    display: block;
+    /* Make about image 100% width of container and add box shadow */
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.221);
+}
+
+.submit-form-btn {
+    display: block;
+    /* Specified width, height, and font size */
+    width: 150px;
+	height: 50px;
+    font-size: 24px;
+    padding: 8px;
+    /* Default button color */
+	background-color: #006298;
+	text-align: center;
+    /* Increased border radius */
+	border-radius: 10px;
+	border: 2px solid #4f7ab3;
+    /* Text automatically set to white */
+	color: white;
+    /* Remove underlined text on button */
+	text-decoration: none;
+    margin-top: 30px;
+    margin-bottom: -20px;
+}
+
+.submit-form-btn:hover {
+    /* Change text, border, and background color on hover */
+    color: white;
+    background-color: #00AA88;
+    border: 2px solid var(--footer);
+}
+
+/* DESTINATION LANDING PAGE */
+.card img {
+    /* Fill image in card containers */
+    width: 100%;
+    height: auto;
+    /* Add box shadows to card images */
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.221);
+}
+
+.location-btn {
+    display: block;
+    /* Specified width, height, and font size */
+    width: 150px;
+	height: 50px;
+    font-size: 24px;
+    padding: 8px;
+    /* Default button color */
+	background-color: #006298;
+	text-align: center;
+    /* Increased border radius */
+	border-radius: 10px;
+	border: 2px solid #4f7ab3;
+    /* Text automatically set to white */
+	color: white;
+    /* Remove underlined text on button */
+	text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.location-btn:hover {
+    /* Change text, border, and background color on hover */
+    color: white;
+    background-color: #00AA88;
+    border: 2px solid var(--footer);
+}
+
+/* DESTINATION LANDING PAGE */
+/* Removes underline on card buttons and headers */
+.card a {
+    text-decoration: none;
+}
+
+/* Change card H1 color and size */
+.card h1 {
+    color: black;
+    font-size: 30px;
+}
+
+/* Add hover color change to indicate clickable link */
+.card h1:hover {
+    color: #5783bd;
+}
+
+
+/* INDIVIDUAL DESTINATION PAGE */
+/* Individual destination back button */
+.back-btn {
+    display: inline-block;
+    /* Specified width, height, and font size */
+    width: 200px;
+	height: 45px;
+    font-size: 18px;
+    padding: 8px;
+    /* Default button color */
+	background-color: #006298;
+	text-align: center;
+    /* Increased border radius */
+	border-radius: 10px;
+	border: 2px solid #4f7ab3;
+    /* Text automatically set to white */
+	color: white;
+    /* Remove underlined text on button */
+	text-decoration: none;
+}
+
+.back-btn:hover {
+    /* Change text, border, and background color on hover */
+    color: white;
+    background-color: #00AA88;
+    border: 2px solid var(--footer);
+}
+
+.pelican {
+    /* Pelican image with width, height, and box shadow set */
+    width: 75%;
+    height: auto;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.221);
+}
+
+.dog {
+    /* Dog image with width, height, and box shadow set */
+    width: 75%;
+    height: auto;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.221);
+}
+
+
+/* RESOURCES PAGE */
+.resources-container a {
+    position: relative;
+    /* Remove underlined text on button */
+    text-decoration: none;
+    color: var(--article);
+}
+
+.resources-container a:hover {
+    color: #4f7ab3;
+    /* Remove underlined text on button */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Integration attribution: https://css-tricks.com/css-link-hover-effects/ */
+/* Utilization from "The Passing Underline Link Hover Effect" */
+.resources-container a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #4f7ab3;
+    bottom: -10px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.resources-container a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+/* FOOTER */
+footer a {
+    color: var(--article);
+}
+
+footer a:hover {
+    color: #4f7ab3;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  NAVIGATION (added from CSS ZIP file extracted)
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+.openbtn {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+}
+
+/* Added cursor pointers to all clickable links */
+.openbtn:hover {
+    color: white;
+    cursor: pointer;
+}
+
+/* Added cursor pointers to all clickable links */
+.menu-button {
+    cursor: pointer;
+    font-size: 36px !important;
+    position: relative;
+    top: 6px;
+    left: -4px;
+}
+
+/* Added cursor pointers to all clickable links */
+.menu-text {
+    cursor: pointer;
+    font-size: 12px;
+    display: block;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* The side navigation menu */
+.all-over-bkg {
+    display: none;
+}
+
+.is-visible {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 9999;
+    display: block;
+}
+
+#mySidenav {
+    z-index: 10000;
+}
+
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    background-color: var(--slideshow-div);
+}
+
+/* The navigation menu links */
+.sidenav a {
+    position: relative;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Quattrocento', Helvetica, sans-serif;
+    color: white;
+}
+
+.sidenav a:hover {
+    color: var(--background);
+}
+
+/* Integration attribution: https://css-tricks.com/css-link-hover-effects/ */
+/* Utilization from "The Passing Underline Link Hover Effect" */
+.sidenav a::before {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--background);
+    bottom: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.sidenav a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.sidenav .closebtn {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    /* Increased close button size */
+    font-size: 46px;
+    margin-left: 50px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  HEADER (GENERAL)
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+header {
+    background-color: var(--navbar);
+    padding-top: 5px;
+    /* Ensure that the width remains 100% on the page */
+    width: 100%;
+    border-bottom: 4px solid #355f96;
+}
+
+.header-styling {
+    display: block;
+    margin: auto;
+    width: 100%;
+    /* Add flex for waves that appear on larger viewports */
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    /* Set height of image for logo and increase top margin */
+    height: 100px;
+    width: auto;
+    margin-top: 3px;
+}
+
+.waves1 {
+    /* Hide on smallest viewport widths */
+    display: none;
+}
+
+.waves2 {
+    /* Hide on smallest viewport widths */
+    display: none;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  HOMEPAGE MAIN (GENERAL)
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+main {
+    transition: margin-left .5s;
+    padding: 0;
+}
+
+.container {
+    /* Stretch up to 1200px wide  */
+    max-width: 1000px;
+    /* Adds padding to the bottom of articles where Ex. buttons are placed to add space */
+    padding-bottom: 2.2em;
+}
+
+/* Required for slideshow integration */
+#container {
+    height: 250px;
+    width: 100% !important;
+    border-bottom: 8px solid var(--background);
+}
+
+video {
+    /* Sets video 100% to container at all times */
+    width: 100%;
+    height: auto;
+}
+
+/* Video overlay container with destination text */
+.video-overlay {
+    position: absolute;
+    /* Manual positioning on slideshow */
+    top: 46.5%;
+    left: 50%;
+    transform: translate(-46.5%, -50%);
+}
+
+article {
+    /* Centers the articles on the page and automatically adds flexboxes to each */
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Homepage first article background color change */
+.introduction {
+    background-color: #22344b;
+}
+
+/* Homepage third article background color change */
+.resources {
+    background-color: #37557c;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  ABOUT PAGE (GENERAL)
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.about-container {
+    /* Stretches up to 1200px wide */
+    max-width: 1200px;
+    /* Adds padding to the bottom of articles where Ex. buttons are placed to add space */
+    padding-bottom: 2.2em;
+}
+
+.about-container-2 {
+    /* Stretches up to 1200px wide */
+    width: 1200px;
+    /* Adds padding to the bottom of articles where Ex. buttons are placed to add space */
+    padding-bottom: 2.2em;
+}
+
+/* Sets the about page's second section's background color */
+.right {
+    padding: 0.1em 2.0em 0.1em 2.0em;
+    background-color: var(--slideshow-div);
+    color: white;
+}
+
+/* Line for about page articles/sections */
+.line {
+    border-bottom: 6px dotted var(--article);
+    width: 93%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: -20px;
+}
+
+/* First line for individual page articles/sections */
+.line3 {
+    border-bottom: 6px dotted var(--article);
+    width: 93%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+/* Second line for individual page articles/sections */
+.line4 {
+    border-bottom: 6px dotted var(--article);
+    width: 93%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+input {
+    /* Sets height and width for contact form text fields */
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    height: 35px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+textarea {
+    /* Sets height and width for contact form textarea */
+    border: 2px solid black;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    height: 100px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  DESTINATION LANDING PAGE (GENERAL)
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.destinations-container {
+    /* Stretches up to 1400px */
+    max-width: 1400px;
+    /* Adds padding to the bottom of articles where Ex. buttons are placed to add space */
+    padding-bottom: 2.2em;
+}
+
+.destinations-page {
+    background-color: hsl(214, 100%, 97%);
+    padding-bottom: 0;
+}
+
+.card {
+    /* Sets card shape, shadows, and transition on hover */
+    background-color: white;
+    width: 400px;
+    margin: 20px 25px 35px 25px;
+    padding: 20px;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.221);
+    transition: all .175s ease-in-out;
+}
+
+.row1 {
+    /* Flexes cards on row based on width size; max 3 cards per row */
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  INDIVIDUAL DESTINATION PAGE (GENERAL)
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.destination-info {
+    /* First article that allows Leaflet integration */
+    width: 100%;
+    padding: 20px;
+    margin-left: 5px;
+}
+
+.container3 {
+    /* Stretches up to 1200px wide */
+    width: 1200px;
+    /* Adds padding to the bottom of articles where Ex. buttons are placed to add space */
+    text-align: left;
+    margin-bottom: -50px;
+}
+
+.map-container {
+    /* Container with manual height and widths to display map with the indentifier below */
+    height: 300px;
+    width: 100%;
+    padding: 0 0 0 0;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 2px solid var(--slideshow-div);
+}
+
+#map {
+    /* Mechanism for based on plugin for displaying map once higher level container has been set */
+    display: block;
+    height: 100%;
+    width: 100%;
+    font-family: 'PT Sans', sans-serif;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  RESOURCES PAGE (GENERAL)
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.resources-container {
+    /* Stretches up to 1200px */
+    max-width: 1200px;
+    /* Adds padding to the bottom of articles where Ex. buttons are placed to add space */
+    padding-bottom: 2.2em;
+}
+
+.line2 {
+    /* Line to separate articles/sections on resources page */
+    border-bottom: 6px dotted var(--article);
+    width: 93%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: -20px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  FOOTER (GENERAL)
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+footer {
+    padding-left: 3.0em;
+    padding-right: 3.0em;
+    padding: 2.0em;
+    /* Background color */
+    background-color: var(--footer);
+    /* Increase space between last article and footer */
+    margin-top: 150px;
+}
+
+.footer-container {
+    /* Allows flex between social media and contact information */
+    /* Max width smaller than main content containers */
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.social-media {
+    margin-right: 70px;
+    margin-bottom: 20px;
+}
+
+.instagram {
+    /* Instagram icon color and size changes */
+    margin-left: 20px;
+    font-size: 30px;
+    color: rgb(255, 83, 83);
+}
+
+.linkedin {
+    /* LinkedIn icon color and size changes */
+    margin-left: 20px;
+    font-size: 30px;
+    color: #004d77;
+}
+
+.twitter {
+    /* Twitter icon color and size changes */
+    margin-left: 20px;
+    font-size: 30px;
+    color: #0075b4;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* On smaller screens, where height is less than 450px */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+
+    /* Changes side navigation font size */
+    .sidenav a {font-size: 18px;}
+}
+
+@media (min-width: 545px) {
+    .container3 h1 {width: 400px;}
+    .back-btn {margin-left: 0;}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    /* Waves now display inline with logo on header */
+    .waves1 {display: inline; height: 32px; width: auto; margin: 35px 30px 0 50px;}
+    .waves2 {display: inline; height: 32px; width: auto; margin: 35px 0 0 30px;}
+
+    /* HOMEPAGE */
+    /* Container for slideshow height increased */
+    #container {position: relative; height: 300px; width: 100%;}
+
+    /* Slideshow text font size increased */
+    .video-overlay h1 {font-size: 46px;}
+
+    /* Reposition intro picture on homepage to the left */
+    .intro-picture {margin: 25px 0 -5px 0;}
+
+    /* Set default destination picture size on higher viewports */
+    .destination-picture {width: 500px; margin: 12px 0 -5px 0;}
+
+    /* Move about me button on the homepage to the left */
+    .about-me-btn {margin-left: 0;}
+
+    /* Move destinations button on the homepage to the left */
+    .destinations-btn {margin-left: 0;}
+
+    /* Move resources button on the homepage to the left */
+    .resources-btn {margin-left: 0;}
+
+
+    /* ABOUT PAGE */
+    .about-header {margin-bottom: 40px;}
+
+    /* Increase the about page info with the other interests section flex */
+    .about-info p {width: 80%;}
+
+    .line {margin-top: -20px;}
+
+    /* Set a default width for input and textareas with higher viewports */
+    input {width: 718px;}
+
+    /* Set a default width for input and textareas with higher viewports */
+    textarea {width: 718px;}
+
+    
+    /* INDIVIDUAL DESTINATION PAGE */
+    /* Individual destination back button */
+    .container3 h1 {width: 100%;}
+    .back-btn {vertical-align: 8px; margin-left: 50px;}
+    
+    .map-container {height: 400px;}
+    
+    
+    /* RESOURCES PAGE */
+    /* Set the bottom resources article to flex between the two texts and links */
+    .other-resources {display: flex; flex-flow: row nowrap;justify-content: center;}
+    
+    /* Set the bottom resources texts and links to a max width to maintain continuity in width size */
+    .resources-section-1 {margin-right: 20px; max-width: 49%;}
+    .resources-section-2 {margin-left: 20px;max-width: 49%;}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    /* Increase the wave sizes and margins */
+    .waves1 {height: 40px; width: auto; margin: 30px 40px 0 20px;}
+    .waves2 {height: 40px; width: auto; margin: 30px 0 0 40px;}
+
+    /* Increase the main header font size to 42px; cascades with larger viewports */
+    h1 {font-size: 42px; margin-bottom: 15px;}
+
+    /* HOMEPAGE */
+    /* Container for slideshow height increased */
+    #container {position: relative; height: 350px; width: 100%;}
+
+    /* Font size of video text on homepage increased */
+    .video-overlay h1 {font-size: 56px;}
+
+    /* Change the color of Florence & Chicago headers to increase visibility on higher viewports */
+    .florence {color: var(--slideshow-div) !important;}
+    .florence:hover {color: var(--article) !important;}
+
+    .about-img {width: 100%; height: auto;}
+
+
+    /* ABOUT PAGE */
+    /* Utilize float for the about page to now display the image and container side-by-side  */
+    .left {float: left; width: 58%; margin-top: -24px;}
+    .right {float: right; width: 38%; margin-top: -24px; padding: 0.1em 2.0em 0.1em 2.0em; background-color: var(--slideshow-div); color: white;}
+
+
+    /* DESTINATION LANDING PAGE */
+    /* For larger viewports, now allow hover for the destination page cards and more accentuated
+    box shadows */
+    .card:hover {transform: scale(1.115); box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.221);}
+    
+    
+    /* INDIVIDUAL DESTINATION PAGE */
+    /* Increase the individual destination page map height */
+    .map-container {height: 500px;}
+
+    /* Floats are utilized here for putting the map and overview text next to each other; I
+    did this since creating a higher level div tag would remove the map on flex */
+    .left2 {float: left; width: 58%; margin-top: -24px;}
+    .right2 {float: right; width: 38%; margin-top: -24px; padding: 0.1em 1.0em 0.1em 1.0em;}
+    
+    /* Increase the subsidiary header sizes on the individual destination page */
+    .overview h1 {color: black; font-size: 36px;}
+    .favorites h1 {color: black; font-size: 36px;}
+    .tips h1 {color: black; font-size: 36px;}
+
+     /* Ensures that text has some space with the pelican image on the Favorite Things to Do
+    section on the individual destination page */
+    .favorites-text1 {max-width: 48%; margin-top: 30px;}
+
+    /* Creates the flex between the pelican image and text in the Favorite Things to Do section
+    on the individual destination page */
+    .favorites-flex {display: flex; flex-flow: row wrap; justify-content: space-between;}
+
+    /* Adds additional space from favorites-text1 text */
+    .pelican {margin-top: 25px; width: 48%; height: auto;}
+
+    /* Ensures that text has some space with the dog image on the Favorite Things to Do
+    section on the individual destination page */
+    .favorites-text2 {max-width: 48%;}
+
+    /* Creates the flex between the dog image and text in the Favorite Things to Do section
+    on the individual destination page */
+    .favorites-flex2 {margin-top: 40px; display: flex; flex-flow: row-reverse wrap; justify-content: space-between;}
+
+    /* Adds additional space from favorites-text1 text */
+    .dog {width: 48%; height: auto;}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /* HOMEPAGE */
+    /* Container for slideshow height increased */
+    #container {position: relative; height: 400px; width: 100%;}
+
+    /* Font size of video text on homepage increased */
+    .video-overlay h1 {font-size: 64px;}
+
+
+    /* ABOUT PAGE */
+    /* Margin top decreased due to flexbox change */
+    .line {margin-top: -50px;}
+
+    .line2 {width: 80%;}
+        
+    
+    /* INDIVIDUAL DESTINATION PAGE */
+    /* Increase the individual destination page map height */
+    .map-container {height: 500px;}
+
+    /* Increases the margin-top so that text is centered with image after wrap has occurred */
+    .favorites-text1 {margin-top: 80px;}
+    .favorites-text2 {margin-top: 140px;}
+}
+
+@media (min-width: 1258px) {
+    .right {margin-top: 20px;}
+
+    .line3 {margin-top: 65px;}
+
+    /* Increases the margin-top so that text is centered with image after wrap has occurred */
+    .favorites-text1 {margin-top: 75px;}
+}
+
+@media (min-width: 1500px) {
+    /* Container for slideshow height increased */
+    #container {position: relative; height: 450px; width: 100%;}
+
+    /* Font size of video text on homepage increased */
+    .video-overlay h1 {font-size: 72px;}
+
+    .line2 {width: 65%;}
+}
+
+@media (min-width: 1800px) {
+    /* Container for slideshow height increased */
+    #container {position: relative; height: 500px; width: 100%;}
+
+    .line2 {width: 60%;}
+}
+
+@media (min-width: 2100px) {
+    /* Container for slideshow height increased */
+    #container {position: relative; height: 550px; width: 100%;}
+}
+
+@media (min-width: 2400px) {
+    /* Container for slideshow height increased */
+    #container { position: relative; height: 600px;}
+
+    .line2 {width: 50%;}
+}
+
+@media (min-width: 2700px) {
+    /* Container for slideshow height increased */
+    #container {position: relative; height: 650px;}
+}
+
+@media (min-width: 3000px) {
+    /* Container for slideshow height increased */
+    #container {position: relative; height: 700px;}
+}
+
+@media (min-width: 3300px) {
+    /* Container for slideshow height increased */
+    #container {position: relative; height: 750px;}
+}
+
+@media (min-width: 3600px) {
+    /* Container for slideshow height increased */
+    #container {position: relative; height: 800px;}
+}
