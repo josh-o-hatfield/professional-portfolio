@@ -1,0 +1,10 @@
+Team 26 - Thomas Burden, Josh Hatfield, Nick Maestri, Gavin Munson
+
+*Note: You can find the sample input suggestions on the project page when testing
+the queries. These suggestions work best based on the data we populated in
+our database.
+
+-
+
+URL Link for Project Home Page (Josh's Account):
+https://cgi.luddy.indiana.edu/~jhatfie/team26.php
