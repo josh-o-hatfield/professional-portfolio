@@ -1,0 +1,364 @@
+
+/* Natural box model */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* --------------------------------------------------
+    Utilities 
+-------------------------------------------------- */
+
+/* Hides an element, but not from screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* No break */
+.nobr {
+    white-space: nowrap;
+}
+
+/* --------------------------------------------------
+    Structure / General
+-------------------------------------------------- */
+body {
+    /* Background Image Attribution: https://www.freepik.com/free-vector/candy-sweets-cakes-seamless-pattern-background-endless-tasty-cream-vector-illustration_10602855.htm#query=cake%20seamless&position=11&from_view=keyword | Image by macrovector on Freepik */
+    background-image: url('../images/background-image.jpg');
+    /* Resize background image based on width (800px) and height (auto) */
+    background-size: 800px auto;
+    /* Repeat seamless background on both x and y directionality */
+    background-repeat: repeat;
+}
+
+/* Applies a border around entire container */
+.border {
+    width: 810px;
+    margin: 35px auto; /* centers the container */
+    background-color: #e68638;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.141);
+}
+
+/* Container for all body content */
+.container {
+    width: 800px;
+    margin: 35px auto; /* centers the container */
+    border: 1px solid rgba(0, 0, 0, 0.777);
+    padding: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.141);
+}
+
+/* --------------------------------------------------
+    Typography
+    https://www.lifewire.com/web-safe-font-stacks-3467429
+    Or VS Code will suggest font stacks after you type in "font-family:"
+-------------------------------------------------- */
+
+/* Font family typography for all headers */
+h2, h3, h4, h5, h6 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Font family typography for other text */
+p, td, li, figcaption {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main header with font-size, font-family, and color changed based on aesthetic sought */
+h1 {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    color: #e68638;
+}
+
+/* Applies a dotted border above every h2 instance */
+/* Decreases bottom margin so that content below is closer to each relevant header */
+h2 {
+    font-size: 32px;
+    color: #29388f;
+    border-top: 2px dotted #29388f;
+    margin-bottom: -2px;
+    padding-top: 18px;
+}
+
+/* Increases the line height of all paragraph tags */
+p {
+    line-height: 1.5em;
+}
+
+/* --------------------------------------------------
+    Links
+-------------------------------------------------- */
+
+/* Removes underline from links and changes general color */
+a:link {
+    color: #ffa358;
+    text-decoration: none;
+}
+
+/* Removes underline from visited links and changes to a contrasting color */
+a:visited {
+    color: #29388f;
+    text-decoration: none;
+}
+
+/* Underlines to indicate that a link exists and adds a different accentuated color */
+a:hover, a:active {
+    color: #ffd000;
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------
+    Tables
+-------------------------------------------------- */
+
+/* Adds a border around entire table; single line created due to border-collapse property set */
+table, td, th {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+/* Changes the color within the table of every other row beginning at row 2 */
+table tr:nth-child(even) {
+    background-color: #29388f0c;
+}
+
+/* Sets the table width 100% to the container and adds a top margin for spacing */
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Changes table header font and background color; increases padding between
+text and cells */
+th {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:rgba(0, 0, 0, 0.137);
+    padding: 10px;
+}
+
+/* Increases all padding within additional data rows */
+td {
+    padding: 10px;
+}
+
+/* --------------------------------------------------
+    Images
+-------------------------------------------------- */
+
+/* Increases general margins on all figures from image on top to figcaption on bottom */
+figure {
+    margin: 2.0em 0;
+}
+
+/* Changes display to block so that text does not overlap image container */
+img {
+    /* tells image to stay within parent container */
+    width: 100%;
+    display: block;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.221);
+    border-radius: 10px;
+}
+
+/* Increases spacing between images and figcaptions */
+figcaption {
+    margin-top: 1.0em;
+}
+
+/* Sets positioning, left border, and animation for left floating figcaption */
+.figcaption1 {
+    border-left: 3px solid #29388f;
+    padding-left: 15px;
+    transition: transform .3s;
+    margin-top: 20px;
+    font-size: 14px;
+    margin-left: 40px;
+}
+
+/* Increases scale and populates box shadow to accentuate figcaption animation */
+.figcaption1:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.097);
+    cursor: default;
+}
+
+/* Sets positioning, left border, and animation for right floating figcaption */
+.figcaption2 {
+    border-left: 3px solid #ff7300;
+    padding-left: 15px;
+    transition: transform .3s;
+    margin-top: 20px;
+    font-size: 14px;
+    width: 300px;
+}
+
+/* Increases scale and populates box shadow to accentuate figcaption animation */
+.figcaption2:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.097);
+    cursor: default;
+}
+
+/* Sets positioning, left border, and animation for third figcaption */
+.figcaption3 {
+    border-left: 3px solid #29388f;
+    transition: transform .3s;
+    padding-left: 15px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Increases scale and populates box shadow to accentuate figcaption animation */
+.figcaption3:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.097);
+    cursor: default;
+}
+
+/* Allows images to reside side by side; width needs to be less than 50% for same line */
+.float-left {
+    float: left;
+    width: 48%;
+}
+
+/* Height and width are manually adjusted so that floating images are the same size */
+.float-left img {
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.097);
+    max-height: 300px;
+    max-width: 300px;
+    margin-left: 40px;
+}
+
+/* Allows images to reside side by side; width needs to be less than 50% for same line */
+.float-right {
+    float: right;
+    width: 48%;
+}
+
+/* Height and width are manually adjusted so that floating images are the same size */
+.float-right img {
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.097);
+    max-width: 300px;
+    max-height: 300px;
+}
+
+/* Adds background color to floating figures and increases top/bottom margins */
+.group {
+    background-color: #29388f0c;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* --------------------------------------------------
+    Page
+-------------------------------------------------- */
+
+/* Emphasizes paragraph text with bold, italics, and font color change */
+.emphasis {
+    font-weight: bold;
+    font-style: italic;
+    color: #ff841f;
+}
+
+/* Increases ul list element line height */
+ul li {
+    line-height: 1.5em;
+}
+
+/* Increases ol list element line height; adds bottom padding to increase space
+between to ol list elements */
+ol li {
+    padding-bottom: 0.4em;
+    line-height: 1.5em;
+}
+
+/* Differentiates prep line with different color and font */
+.prep {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: gray;
+}
+
+/* Increases spacing between headers and bottom of ul lists */
+.ingredients ul {
+    margin-top: 0px;
+    padding-bottom: 10px;
+}
+
+/* Increases spacing between headers and bottom of ul lists */
+.chocolate-cake-ingredients, .caramel-sauce-ingredients, .buttercream-ingredients, .ganache-ingredients {
+    margin-bottom: 6px;
+    padding-top: 5px;
+}
+
+/* Increases spacing between headers and bottom of ul lists */
+.bottom-ingredient-list {
+    margin-bottom: -15px;
+}
+
+/* Increases spacing between headers and bottom of ul lists */
+.directions li {
+    padding-left: 10px;
+}
+
+/* Enlarges font size and shifts to the right to match ol list */
+.preparation {
+    margin-bottom: -8px;
+    margin-left: 24px;
+    font-size: 17px;
+}
+
+/* Enlarges font size and shifts to the right to match ol list */
+.baking {
+    margin-bottom: -8px;
+    margin-left: 24px;
+    font-size: 17px;
+}
+
+/* Increases spacing between headers and bottom of ul lists */
+.caramel-sauce-directions, .buttercream-directions, .ganache-directions, .assembly-directions {
+    margin-bottom: -8px;
+}
+
+/* Adds background color and padding to other notes section */
+.other-notes {
+    background-color: #29388f0c;
+    padding-top: 1px;
+    padding-right: 15px;
+    padding-bottom: 1px;
+    padding-left: 15px;
+}
+
+/* Decreases space between other notes header and first paragraph */
+.other-notes-header {
+    margin-bottom: -8px;
+}
+
+/* Decreases space from bottom ul list element and bottom of white container */
+.bottom-related-recipes-list {
+    margin-bottom: -30px;
+}

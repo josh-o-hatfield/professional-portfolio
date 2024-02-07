@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salted Caramel Chocolate Cake | Project 1 Demo</title>
+
+    <!-- Link to normalize.css, which adds baseline styles for cross-browser consistency and support -->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Link to styles.css, which includes personal webpage styling choices -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Documentation 
+        This HTML page entails Project 1, containing a combination of HTML and CSS to display a single-column, fixed-width
+        webpage containing a recipe. Styling relates to images, tables, typography, pages, and general HTML structures
+        (including normalize.css for standard webpage viewing across browsers)
+
+        @author     Josh Hatfield
+        @professor  Professor Lee
+        @course     INFO-I 360 (Section 8019) | Project 1
+        @date       2/5/2023
+     -->
+
+    <div class="border">
+        <div class="container">
+
+            <!-- **************************************************************************** -->
+
+            <!-- Section 1 - Cake Introduction -->
+
+            <!-- Image Source Attribution: https://www.piesandtacos.com/salted-caramel-chocolate-cake/ | Image by camilia on pies & tacos -->
+            <img src="images/chocolate-caramel-cake.jpg" alt="Chocolate Caramel Cake"
+                title="Glazed Salted Caramel Cake with Salted Caramel Fudge Truffles">
+
+            <!-- Main page header -->
+            <h1>Salted Caramel Chocolate Cake</h1>
+
+            <!-- Link to recipe and date; typography changed to code for dashes -->
+            <!-- ID links to recipe, heating directions, and related recipes sections -->
+            <p>February 5, 2023 &nbsp; &mdash; &nbsp; <a href="#recipe">RECIPE</a>
+                &nbsp; &mdash; &nbsp; <a href="#heating">HEATING</a>
+                &nbsp; &mdash; &nbsp; <a href="#directions">DIRECTIONS</a>
+                &nbsp; &mdash; &nbsp; <a href="#related-recipes">RELATED RECIPES</a></p>
+
+            <!-- Intro paragraph with typography change for apostrophes -->
+            <p>
+                Today, we&rsquo;re going to be baking what I&rsquo;d consider a ubiqituously suave and luscious
+                <span class="emphasis">Salted Caramel Chocolate Cake</span>, perfect for all events
+                regardless of size or formality. Due to the delicacy of the baking process, this page will
+                encapsulate all the challenges and processes in simplified steps so that you can
+                focus less on stress and more on your savory results! Below, you can expect to find
+                a list of:
+            </p>
+
+            <!-- List 1; line spacing increased to match paragraph spacing -->
+            <ul>
+                <li>Ingredients</li>
+                <li>Precise directions</li>
+                <li>A table for heating instructions and necessities</li>
+                <li>Various images of the baking process</li>
+                <li>Links to recipes that may slightly differentiate outside of the glaze or Fudge Truffles illustrated
+                    in the image above</li>
+            </ul>
+
+            <!-- Grouping for side-by-side images -->
+            <div class="group">
+                <!-- Left figure and figcaption with 48% size to fit both images together -->
+                <figure class="float-left">
+                    <!-- Image Source Attribution: https://www.sweetandsavorybyshinee.com/caramel-buttercream-frosting/ | Image by Shinee on sweet & savory by Shinee -->
+                    <img src="images/salted-caramel-buttercream.jpg" alt="Salted Caramel Buttercream"
+                        title="Salted Caramel Buttercream has a nice consistency and weight for layering on the cake">
+                    <figcaption class="figcaption1">Salted Caramel Buttercream has a nice consistency and weight for
+                        layering on the cake</figcaption>
+                </figure>
+
+                <!-- Right figure and figcaption with 48% size to fit both images together -->
+                <figure class="float-right">
+                    <!-- Image Source Attribution: https://basilandbuttercream.com/chocolate-salted-caramel-pretzel-cake/ | Image by admin on basil & Buttercream -->
+                    <img src="images/layer-styling.jpg" alt="Layer Styling Choices"
+                        title="Layering allows for many options depending on glaze selection and treats like pretzels or Fudge Truffles">
+                    <figcaption class="figcaption2">Layering allows for many options depending on glaze selection and
+                        additional treats like pretzels or Fudge Truffles</figcaption>
+                </figure>
+            </div>
+
+            <!-- **************************************************************************** -->
+
+            <!-- Section 2 - Recipe/Ingredients -->
+
+            <h2 id="recipe">Recipe &amp; Ingredients</h2>
+
+            <!-- Prep class with styling changes -->
+            <p class="prep">Prep Time: 45 minutes &nbsp; | &nbsp; Cook Time: 20 minutes &nbsp; | &nbsp; Servings: 10
+                people</p>
+
+            <p>To render the most comprehensive recipe due to the varying baking, assemblage methods,
+                and ingredient accompaniments, I utilize a combination of two recipes throughout the
+                baking process. In the first recipe,
+                <!-- Recipe 1 Source Attribution: https://www.piesandtacos.com/salted-caramel-chocolate-cake/ | Recipe by camila on pies & tacos -->
+                <a href="https://www.piesandtacos.com/salted-caramel-chocolate-cake/" target="_blank">
+                    Camila on the site <em>pies &amp; tacos</em></a>
+                primarily highlights the glazing process and includes rationale for many of the
+                instructions when baking the cake; in the second recipe, the
+                <!-- Recipe 2 Source Attribution: https://basilandbuttercream.com/chocolate-salted-caramel-pretzel-cake/ | Recipe by admin on basil & Buttercream -->
+                <a href="https://basilandbuttercream.com/chocolate-salted-caramel-pretzel-cake/" target="_blank">
+                    <em>basil &amp; Buttercream team</em></a>
+                sectionalizes the cake into different recipes and offers additional instructions
+                for chocolate ganache if desired.
+            </p>
+
+            <!-- Typography change for apostrophe -->
+            <p>
+                While the caramel sauce applied throughout can be store-bought, both recipes simplify
+                the cooking process for making delicious homemade servings. Therefore, the ingredients
+                and instructions both account for this, but store-bought caramel sauce still works perfectly
+                when added to the cake during glazing. The majority of the subsequent sections will
+                reference Camila&rsquo;s recipe, yet any recipes and directions for chocolate ganache will
+                be in reference to the basil & Buttercream team&rsquo;s recipe.
+            </p>
+
+            <!-- Added div tag to add styling to all ul elements -->
+            <div class="ingredients">
+                <!-- Div tag for decreasing bottom margin and increasing top padding -->
+                <h3 class="chocolate-cake-ingredients">Chocolate Cake</h3>
+
+                <!-- List 2 -->
+                <ul>
+                    <li>1 1/2 cups all-purpose flour (<em>183 grams, 5.4 oz</em>)</li>
+                    <li>1/3 cup unsweetened cocoa powder (<em>39 grams, 1.38 oz</em>)</li>
+                    <li>1 1/2 teaspoon baking powder</li>
+                    <li>1 teaspoon baking soda</li>
+                    <li>3/4 teaspoon fine sea salt</li>
+                    <li>1/2 cup unsalted butter room temperature (<em>113 grams, 4 oz</em>)</li>
+                    <li>1 cups sugar (<em>200 grams, 7 oz</em>)</li>
+                    <li>2 eggs</li>
+                    <li>2 teaspoons vanilla extract</li>
+                    <li>2/3 cup milk (<em>157 ml</em>)</li>
+                    <li>2/3 cup hot brewed coffee read notes* (<em>157 ml</em>)</li>
+                </ul>
+
+                <!-- Div tag for decreasing bottom margin and increasing top padding -->
+                <h3 class="caramel-sauce-ingredients">Salted Caramel Sauce</h3>
+
+                <!-- List 3 -->
+                <ul>
+                    <li>2 cups sugar (<em>400 grams, 14 oz</em>)</li>
+                    <li>1 cup heavy cream (<em>240 ml</em>)</li>
+                    <li>12 tbsp unsalted butter (<em>170 grams, 6 oz</em>)</li>
+                    <li>1 tsp kosher salt</li>
+                </ul>
+
+                <!-- Div tag for decreasing bottom margin and increasing top padding -->
+                <h3 class="buttercream-ingredients">Salted Caramel Buttercream</h3>
+
+                <!-- List 4 -->
+                <ul>
+                    <li>1 cup caramel sauce from the recipe below, or use store-bought</li>
+                    <li>6 cups powdered sugar (<em>750 grams, 26.46 oz</em>)</li>
+                    <li>2 cups unsalted butter room temperature (<em>453 grams, 16 oz</em>)</li>
+                    <li>1 tsp vanilla extract</li>
+                    <li>1/2 tsp salt or more to taste</li>
+                </ul>
+
+                <!-- Div tag for decreasing bottom margin and increasing top padding -->
+                <h3 class="ganache-ingredients">Chocolate Ganache</h3>
+
+                <!-- List 5 -->
+                <ul class="bottom-ingredient-list">
+                    <li>4.5 ounces semi-sweet, milk or dark chocolate finely chopped</li>
+                    <li>3 ounces heavy cream</li>
+                </ul>
+            </div>
+
+            <!-- **************************************************************************** -->
+
+            <!-- Section 3 - Heating Instructions & Table -->
+
+            <h2 id="heating">Heating Instructions</h2>
+
+            <p>
+                Given that some of the ingredients need to be heated, you can find a table
+                below that elucidates heating instructions for these individual items. These heating
+                steps can likewise be done at the same time to reduce the overall prep time and
+                maintain better consistency regarding when the items are applied to the chocolate
+                cake.
+            </p>
+
+            <!-- Table 1 with styling -->
+            <table>
+                <tr>
+                    <!-- Table headers -->
+                    <th>Food</th>
+                    <th>Heating Instructions</th>
+                </tr>
+                <tr>
+                    <!-- Table row data -->
+                    <td>Chocolate Cake</td>
+                    <!-- Typography addition for degree F symbol -->
+                    <td>Preheat the oven to 350&#8457;. Spray three 6-inch round cake pans with cooking spray and line
+                        with parchment paper</td>
+                </tr>
+                <tr>
+                    <!-- Table row data -->
+                    <td>Salted Caramel Sauce</td>
+                    <td>Place the sugar, water and corn syrup in a sauce pan. Place over high heat and stir until the
+                        sugar begins to dissolve</td>
+                </tr>
+                <tr>
+                    <!-- Table row data -->
+                    <td>Chocolate Ganache</td>
+                    <td>In a small sauce pan over medium heat, bring cream just to a boil</td>
+                </tr>
+            </table>
+
+            <!-- Typography addition for degree F symbol -->
+            <p>
+                We want to bake the chocolate cake at 350&#8457; since any other temperature may
+                reduce rigidness needed to support the Fudge Truffles on top or potentially burn the
+                cake. Moveover, if any sugar is still crystallized in the salted caramel sauce, we need
+                to attempt to mix the sauce well while maintaining viscosity or pour the sauce through a filter
+                to catch this residing sugar. Lastly, boiling for the chocolate ganache indicates any
+                bubbling on the surface of the cream.
+            </p>
+
+            <!-- **************************************************************************** -->
+
+            <!-- Section 4 - Directions -->
+
+            <h2 id="directions">Directions</h2>
+
+            <p>
+                These directions are also sectionalized to match the ingredients. You probably want to
+                pay attention to some steps beforehand since assemblage may be time sensitive with
+                glazing that could soak into the layering or ingredients that need to be heated.
+            </p>
+
+            <div class="directions">
+                <!-- Div class for decreasing spacing between header and content below -->
+                <h3 class="chocolate-cake-directions">Chocolate Cake</h3>
+
+                <!-- Shifts preparation header to the right to match list positioning -->
+                <h4 class="preparation">Preparation</h4>
+
+                <!-- List 6 -->
+                <ol>
+                    <!-- Typography addition for degree F symbol -->
+                    <li>Pre-heat oven to 350&#8457;</li>
+                    <!-- Typography change for right quotation mark -->
+                    <li>Butter 4-6&rdquo; cake pans and place a parchment paper circle in the bottom of pans. Butter
+                        parchment. You can also use spray oil instead. Set aside</li>
+                    <li>Sift together the flour, cocoa powder, baking powder, baking soda, salt, and espresso powder, if
+                        using it instead of the coffee. Set aside</li>
+                    <li>Cream the butter at medium-high speed for 1 minute</li>
+                    <li>Add sugar slowly, cream for another 2 minutes</li>
+                    <li>Add eggs to the mixture, one at a time, scraping the bowl in between and making sure the first
+                        egg is incorporated before adding the second one</li>
+                    <li>Add vanilla extract and mix</li>
+                    <li>Slowly add milk, mix to combine</li>
+                    <li>Pour dry ingredients over wet mixture</li>
+                    <li>Fold with a spatula slowly, until ingredients are just combined</li>
+                    <li>If you see big clumps of cocoa powder, you can use the whisk to try to gently smooth the batter
+                        out</li>
+                    <li>Once batter is incorporated, pour hot coffee in the bowl. Whisk until combined</li>
+                    <li>Pour batter evenly onto baking pans</li>
+                </ol>
+
+                <!-- Shifts preparation header to the right to match list positioning -->
+                <h4 class="baking">Baking</h4>
+
+                <!-- List 7 -->
+                <ol>
+                    <!-- Typography change for apostrophe -->
+                    <li>Bake in pre-heated oven for 15-20 min. After the 12 minute mark, keep checking regularly,
+                        because you don&rsquo;t want to burn your cakes or over bake them. Remove them from the oven
+                        once a
+                        toothpick comes our clean once inserted in the cake</li>
+                    <li>Once you remove it from the oven, wait 10 minutes, flip cakes onto a cookie cooling rack and let
+                        cakes cool</li>
+                    <li>Once cool, wrap each layer individually in plastic wrap and refrigerate until ready to use. I
+                        like to leave my layers in the fridge for quite a bit so they can firm up and make it easier to
+                        assemble and decorate the cake</li>
+                </ol>
+
+                <!-- Div class for decreasing spacing between header and content below -->
+                <h3 class="caramel-sauce-directions">Salted Caramel Sauce</h3>
+
+                <!-- List 8 -->
+                <ol>
+                    <!-- Typography change for apostrophe -->
+                    <li>Place the sugar in a medium to large saucepan. Don&rsquo;t use a small pan for a couple of
+                        reasons: so
+                        that the sugar has an easier time melting evenly, and so that the caramel doesn&rsquo;t bubble
+                        up out
+                        of the pan once you add the cream and butter at the end</li>
+                    <li>Bring to a boil over medium heat. Stir constantly to help the sugar melt evenly</li>
+                    <li>As soon as the sugar melts entirely, it will be amber color. At this point, remove it
+                        immediately from the heat</li>
+                    <li>Add the cream and salt. Be careful. The mixture is going to bubble up to the top, so be careful
+                        not to get burnt. After a second, it will subside, and you can whisk mixture</li>
+                    <li>Whisk until combined</li>
+                    <li>Add the butter. Again, mixture will bubble up, so be careful</li>
+                    <li>Whisk until combined</li>
+                    <li>Bring mixture to a quick boil, while constantly whisking</li>
+                    <li>Let it boil for a few seconds, literally a few seconds, just until the sugar re-melts. Remove
+                        from the heat</li>
+                    <!-- Typography change for apostrophe -->
+                    <li>Wait a couple of minutes until caramel cools slightly. If you notice there are still a couple of
+                        pieces of crystallized sugar that haven&rsquo;t melted again, just use a strainer to pour the
+                        caramel
+                        into a jar</li>
+                    <li>After pouring the caramel into a glass jar, or heat-proof container, let it cool completely at
+                        room temperature</li>
+                </ol>
+
+                <!-- Table spanning 100% of container with figcaption added and styled -->
+                <figure>
+                    <img src="images/glazing.jpg" alt="Crumb Coating with Salted Caramel Buttercream"
+                        title="Crumb Coating with Salted Caramel Buttercream">
+                    <figcaption class="figcaption3">Here, we can see the Salted Caramel Buttercream being layered onto
+                        the outside of the cake. This assists with crumb coating and offers a nice elegant appearance
+                        that contrasts well with the caramel drip.</figcaption>
+                </figure>
+
+                <!-- Div class for decreasing spacing between header and content below -->
+                <h3 class="buttercream-directions">Salted Caramel Buttercream</h3>
+
+                <!-- List 10 -->
+                <ol>
+                    <li>First make sure the Salted Caramel Sauce is completely cool down, but not cold from the fridge.
+                        If the sauce is warm, it will melt the butter from the frosting, and if it&rsquo;s cold it will
+                        lump
+                        up</li>
+                    <li>It has to be at room temperature</li>
+                    <li>Sift the powdered sugar and set it aside</li>
+                    <li>Cream the butter at medium high speed for 3 minutes, until very fluffy</li>
+                    <li>Add the sifted powdered sugar to the butter and mix on low to combine</li>
+                    <li>Add the caramel and raise the speed to medium high, and cream for a couple of minutes, until
+                        fluffy</li>
+                    <li>Add the salt and the vanilla extract</li>
+                    <li>If the buttercream is too runny, add more sifted powdered sugar to adjust the consistency. And
+                        if the buttercream is too stiff, add a teaspoon or so of water or milk to thin it out</li>
+                </ol>
+
+                <h3 class="ganache-directions">Chocolate Ganache</h3>
+
+                <!-- List 11 -->
+                <ol>
+                    <li>In a small sauce pan over medium heat, bring cream just to a boil</li>
+                    <li>Remove from heat and pour over chocolate. Let stand for 5 minutes without stirring</li>
+                    <li>Stir with whisk until smooth. Let cool to room temperature</li>
+                </ol>
+
+                <!-- Div class for decreasing spacing between header and content below -->
+                <h3 class="assembly-directions">Assembly</h3>
+
+                <!-- List 12 -->
+                <ol class="bottom-directions-list">
+                    <li>Place one cake layer on top of a cake plate</li>
+                    <!-- Typography change for apostrophe -->
+                    <li>Transfer some of the buttercream to a piping bag, leaving the remaining buttercream covered so
+                        it doesn&rsquo;t dry up</li>
+                    <li>Spread a very thin layer of buttercream on top of the first cake layer. This will help the
+                        caramel sauce not soak into the cake</li>
+                    <li>Pipe a ring of frosting around the edges of the first layer</li>
+                    <li>Pour about 1/4 cup of caramel sauce in the middle of the cake</li>
+                    <li>Spread a thin layer of buttercream on the bottom of the next cake layer</li>
+                    <li>Place it on top of the caramel filled cake layer</li>
+                    <li>Spread a thin layer of buttercream on the cake. Then pipe a ring of frosting around, and fill
+                        with caramel sauce</li>
+                    <li>Repeat until you reach the final cake layer, remembering to always spread a layer of buttercream
+                        on both sides of the cakes, to prevent the caramel sauce from soaking into the cake</li>
+                    <li>Spread a thin layer of frosting around the whole cake and smooth it out</li>
+                    <li>Place the cake in the fridge and let the cake cool for about 30 minutes</li>
+                    <li>This process is called crumb coating, and it helps to seal the crumbs of cake in, so they
+                        don&rsquo;t
+                        show on the final layer of frosting</li>
+                    <li>Remove the cake from the fridge and apply a thick coating of frosting around the cake. Use a
+                        spatula to smooth it out as best as possible</li>
+                    <li>Place the cake back in the fridge until very cold, for at least 1 hour</li>
+                    <li>Then you can begin to drip the caramel down the sides of the cake</li>
+                    <li>I placed the caramel in a piping bag. You can place the caramel in a piping bag, or use a spoon,
+                        or simply pour the sauce on top of the cake</li>
+                    <li>I usually test out a couple of drops of caramel on the back of the cake to see if they are
+                        dripping nicely and steadily before pouring the caramel drip on the whole cake</li>
+                    <li>If the caramel is too runny, I&rsquo;ll place it in the fridge for 5 minutes or so. And if the
+                        caramel
+                        is too thick, I will microwave it for 3 to 5 seconds to thin it out slightly</li>
+                    <li>Place the cake back in the fridge for about 2 hours to let the caramel drip dry before piping
+                        anything on top of the cake</li>
+                </ol>
+
+                <!-- Div class for decreasing spacing between header and content below -->
+                <div class="other-notes">
+                    <h3 class="other-notes-header">Other Notes</h3>
+
+                    <!-- Typography change for apostrophe -->
+                    <p><strong>Coffee in the cake</strong>: Always feel free to substitute the hot coffee for hot water.
+                        You
+                        could also add 1 teaspoon of espresso powder to the dry ingredients if that&rsquo;s the case, or
+                        simply go
+                        without and use just the hot water. I have made this cake many times without coffee, using water
+                        instead, and it turned out fine. The coffee is simply used to enhance the chocolate flavor and
+                        richness, but not completely mandatory.</p>
+
+                    <p><strong>Caramel</strong>: If using store-bought caramel sauce, you will need 2 to 2 1/2 cups of
+                        caramel for the filling, for the frosting, and for the caramel drip.</p>
+
+                    <p><strong>Salt</strong>: Leave out the salt from the recipe for regular caramel, or increase the
+                        amount
+                        of salt if you like it really salted. Cinnamon: a little sprinkle of cinnamon in the frosting
+                        (about
+                        1/4 tsp) will go a long way here and really add a lot of depth to the flavors of this cake.</p>
+
+                    <p><strong>Truffles</strong>: I topped the cake with these Caramel Fudge Truffles. They are super
+                        easy
+                        to make.</p>
+                </div>
+            </div>
+
+            <!-- **************************************************************************** -->
+
+            <!-- Section 5 - Related Recipes -->
+
+            <h2 id="related-recipes">Related Recipes</h2>
+
+            <!-- Typography change for apostrophe -->
+            <p>In this section, you can find some additional recipes for salted caramel chocolate cake as well as
+                a few other desserts. Every link similarly includes ingredients and directions if
+                you&rsquo;re curious to try your hand after taking a peek: </p>
+
+            <!-- List 13 -->
+            <ul>
+                <!-- Recipe 3 Source Attribution: https://kitchenfunwithmy3sons.com/salted-caramel-truffles/ | Recipe by Jill Mills on Kitchen Fun with My Three Sons  -->
+                <li><a href="https://kitchenfunwithmy3sons.com/salted-caramel-truffles/" target="_blank">Salted Caramel
+                        Truffles by Jill
+                        Mills | Kitchen Fun with My Three Sons</a></li>
+                <!-- Recipe 4 Source Attribution: Chocolate Sheet Cake with Salted Caramel Buttercream | Recipe by Tara Kringlen on The Marble Kitchen -->
+                <li><a href="https://www.themarblekitchen.com/chocolate-sheet-cake-with-salted-caramel-buttercream/"
+                        target="_blank">Chocolate
+                        Sheet Cake with Salted Caramel Buttercream by Tara Kringlen | The Marble Kitchen</a></li>
+                <!-- Recipe 5 Source Attribution: https://www.sprinklebakes.com/2021/09/salted-caramel-popcorn-cake.html | Recipe by Heather Baird on Sprinkle Bakes -->
+                <li><a href="https://www.sprinklebakes.com/2021/09/salted-caramel-popcorn-cake.html"
+                        target="_blank">Salted Caramel Popcorn Cake by Heather Baird | Sprinkle Bakes</a></li>
+                <!-- Recipe 6 Source Attribution: https://saltedmint.com/pecan-caramel-rum-cake/ | Recipe by Debs on Salted Mint Modern Farmhouse Cooking -->
+                <li><a href="https://saltedmint.com/pecan-caramel-rum-cake/" target="_blank">Pecan Caramel Rum Cake by
+                        Debs | Salted Mint Modern Farmhouse Cooking</a></li>
+                <!-- Recipe 7 Source Attribution: https://www.glorioustreats.com/pumpkin-salted-caramel-cake/ | Recipe by glourious treats -->
+                <li class="bottom-related-recipes-list"><a
+                        href="https://www.glorioustreats.com/pumpkin-salted-caramel-cake/" target="_blank">Pumpkin Cake
+                        with Salted Caramel Frosting | glorious treats</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
