@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+	This HTML page entails the destinations page of the Final Project, containing a combination of HTML and 
+	CSS to add responsive design to the frontend as well as implement one plugin on the page: 
+	1) navigation bar. Both flexbox and media queries are utilized for setting flexible pages based 
+	on viewport size.
+
+    @author     Josh Hatfield
+    @professor  Professor Lee
+    @course     INFO-I 360 (Section 8019) | Final Project
+    @date       5/2/2023
+-->
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Odyssey Atlas | Destinations</title>
+
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" href="css/normalize.css">
+
+	<!-- Google font for navbar plugin -->
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- Playfair Display font -->
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+		rel="stylesheet">
+	<!-- Quattrocento font -->
+	<link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+	<!-- Karla font -->
+	<link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+
+	<!-- Custom Styles -->
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+	<!-- HEADER  -->
+	<header>
+		<!-- NAVIGATION -->
+		<nav id="mySidenav" class="sidenav">
+			<ul>
+				<li><a class="closebtn">&times;</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="destinations.html">Destinations</a></li>
+				<li><a href="resources.html">Resources</a></li>
+			</ul>
+		</nav>
+
+		<!-- Open the sidenav with text -->
+		<div class="openbtn">
+			<span class="material-symbols-outlined menu-button">menu</span>
+			<span class="menu-text">menu</span>
+		</div>
+
+		<div class="all-over-bkg"></div>
+
+		<div class="header-styling">
+			<!-- Waves and logo created using free assets on canva.com  -->
+			<img class="waves1" src="images/waves1.png" alt="waves styling">
+			<a href="index.html"><img class="logo" src="images/odyssey_atlas.png" alt="Oddsey Atlas Logo"></a>
+			<img class="waves2" src="images/waves2.png" alt="waves styling">
+		</div>
+	</header>
+
+	<!-- **************************************************************************** -->
+
+	<!-- MAIN CONTENT -->
+	<main>
+
+		<!-- Article 1 with max width container set -->
+		<article class="destinations-page">
+			<div class="destinations-container">
+				<!-- Flexes cards based on max width set -->
+				<div class="row1">
+					<section class="card">
+						<a href="sanibel-island.html"><img src="images/sanibel_island2.jpg"
+								alt="Sanibel Island Sign, 2022" title="Sanibel Island Sign, 2022"></a>
+						<a href="sanibel-island.html" title="Sanibel Island, FL Link">
+							<h1>Sanibel Island, FL</h1>
+						</a>
+						<p>Located directly off Fort Myers, FL, this island hosts beautiful ocean-front views, a
+							luscious
+							mix of fine dining, and invigorating activites like jet skiing!</p>
+						<a class="location-btn" href="sanibel-island.html" title="More Info">More Info</a>
+					</section>
+					<section class="card">
+						<a href="sanibel-island.html"><img src="images/new_york3.jpg" alt="New York Skyline, 2019"
+								title="New York Skyline, 2019"></a>
+						<a href="sanibel-island.html" title="New York, NY Link">
+							<h1>New York, NY</h1>
+						</a>
+						<p>From the Empire State Building to the Statue of Liberty, New York City's attractions
+							encapsulate some of my favorite adventures in the U.S.</p>
+						<a class="location-btn" href="sanibel-island.html" title="More Info">More Info</a>
+					</section>
+					<section class="card">
+						<!-- Image Attribution: Nadine Biezmienove on Pexels -->
+						<!-- Retrieved from: https://www.pexels.com/photo/dock-under-purple-sky-2439004/ -->
+						<a href="sanibel-island.html"><img src="images/cozumel.jpg" alt="Cozumel Sunset on Water, 2022"
+								title="Cozumel Sunset on Water, 2022"></a>
+						<a href="sanibel-island.html" title="Cozumel, Mexico Link">
+							<h1>Cozumel, Mexico</h1>
+						</a>
+						<p>This cruise ship port offers some of the most memorable island (and scuba diving)
+							excursions for essentially every tourist demographic. Would definitely visit again!</p>
+						<a class="location-btn" href="sanibel-island.html" title="More Info">More Info</a>
+					</section>
+					<section class="card">
+						<a href="sanibel-island.html"><img src="images/chicago.jpg"
+								alt="Chicago Architecture, Cloudy Sky 2021"
+								title="Chicago Architecture, Cloudy Sky 2021"></a>
+						<a href="sanibel-island.html" title="Chicago, IL Link">
+							<h1>Chicago, IL</h1>
+						</a>
+						<p>Being able to see some of the visceral artwork in history at the Art Institute of Chicago was
+							an experience easily worth the surprisingly low price of admission.</p>
+						<a class="location-btn" href="sanibel-island.html" title="More Info">More Info</a>
+					</section>
+					<section class="card">
+						<a href="sanibel-island.html"><img src="images/badlands.jpg"
+								alt="South Dakota Hills near Mount Rushmore, 2021"
+								title="South Dakota Hills near Mount Rushmore, 2021"></a>
+						<a href="sanibel-island.html" title="South Dakota Hills, SD Link">
+							<h1>Badlands, SD</h1>
+						</a>
+						<p>While perhaps part of less tame localities in the U.S., the Badlands still offer incredibly
+							spectacular views, trails, and histories as part of every nature-lover's dream.</p>
+						<a class="location-btn" href="sanibel-island.html" title="More Info">More Info</a>
+					</section>
+					<section class="card">
+						<!-- Image Attribution: KEN COOPER on Pexels -->
+						<!-- Retrieved from: https://www.pexels.com/photo/cars-parked-on-the-roadside-near-city-buildings-6379409/ -->
+						<a href="sanibel-island.html"><img src="images/new_orleans.jpg" alt="New Orleans Street on Sunny Day, 2017" 
+								title="New Orleans Street on Sunny Day, 2017"></a>
+						<a href="sanibel-island.html" title="New Orleans, LA Link">
+							<h1>New Orleans, LA</h1>
+						</a>
+						<p>New Orleans certainly encompasses many of the artistic and cultural eccentricities that made
+							my trip feel unexpectedly exhilarative compared to some other well-known cities.</p>
+						<a class="location-btn" href="sanibel-island.html" title="More Info">More Info</a>
+					</section>
+				</div>
+			</div>
+		</article>
+
+		<!-- FOOTER -->
+		<footer>
+			<div class="footer-container">
+				<section class="social-media">
+					<h2>Social Media</h2>
+					<div class="social">
+						<!-- Default social media icons -->
+						<p>Instagram<a href="#" title="Instagram Link"><span
+									class="material-symbols-outlined instagram">heart_plus</span></a></p>
+						<p>LinkedIn<a href="#" title="LinkedIn Link"><span
+									class="material-symbols-outlined linkedin">swipe_right</span></a></p>
+						<p>Twitter<a href="#" title="Twitter Link"><span
+									class="material-symbols-outlined twitter">group</span></a></p>
+					</div>
+				</section>
+				<section>
+					<h2>Contact Me</h2>
+					<p>Email Address: <a href="mailto:jhatfie@iu.edu"
+							title="Email to: jhatfie@iu.edu">jhatfie@iu.edu</a></p>
+					<p>Phone Number: (123) 456-7890</p>
+				</section>
+			</div>
+		</footer>
+	</main>
+
+	<!-- **************************************************************************** -->
+
+	<!-- JAVASCRIPT -->
+	<!-- Responsive side push navigation w/ opacity in nav.js file -->
+	<script src="js/nav.js"></script>
+
+</body>
+
+</html>
