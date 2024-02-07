@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="751.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainOrderWindowController">
+   <children>
+      <AnchorPane prefHeight="385.0" prefWidth="391.0">
+         <children>
+            <Line endX="387.5" endY="62.0" layoutX="1.0" layoutY="336.0" scaleZ="0.5" startY="62.0" stroke="#00000040" />
+            <Label layoutX="14.0" layoutY="16.0" text="Thneed Ordering System" textFill="#33579e">
+               <font>
+                  <Font name="Dubai Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="68.0" text="Unfilled Orders">
+               <font>
+                  <Font name="Gill Sans MT" size="12.0" />
+               </font>
+            </Label>
+            <TableView fx:id="unfilledOrders" layoutX="14.0" layoutY="92.0" prefHeight="282.0" prefWidth="363.0">
+              <columns>
+                <TableColumn fx:id="unfilledTableOrderID" prefWidth="75.0" text="Order #" />
+                <TableColumn fx:id="unfilledTableCustomer" prefWidth="115.0" text="Customer" />
+                  <TableColumn fx:id="unfilledTableOrderDate" prefWidth="86.0" text="Order Date" />
+                  <TableColumn fx:id="unfilledTableFilledDate" prefWidth="86.0" text="Filled Date" />
+              </columns>
+            </TableView>
+            <Button fx:id="addOrderButton" layoutX="280.0" layoutY="27.0" mnemonicParsing="false" onAction="#addOrderNav" style="-fx-background-color: #3B6AA0; -fx-text-fill: white;" text="Add Order +" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="398.0" prefHeight="188.0" prefWidth="388.0">
+         <children>
+            <Label layoutX="14.0" layoutY="15.0" text="Filled Orders">
+               <font>
+                  <Font name="Gill Sans MT" size="12.0" />
+               </font>
+            </Label>
+            <TableView fx:id="filledOrders" layoutX="13.0" layoutY="40.0" prefHeight="282.0" prefWidth="363.0">
+               <columns>
+                  <TableColumn fx:id="filledTableOrderID" prefWidth="75.0" text="Order #" />
+                  <TableColumn fx:id="filledTableCustomer" prefWidth="115.0" text="Customer" />
+                  <TableColumn fx:id="filledTableOrderDate" prefWidth="86.0" text="Order Date" />
+                  <TableColumn fx:id="filledTableFilledDate" prefWidth="86.0" text="Filled Date" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Line endY="649.2929077148438" layoutX="389.0" layoutY="100.0" startY="-100.0" stroke="#00000040" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="561.0" layoutX="402.0" layoutY="91.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.1" width="306.0" />
+      <Label layoutX="487.0" layoutY="101.0" text="Order Information" textFill="#33579e">
+         <font>
+            <Font name="Dubai Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="412.0" layoutY="139.0" text="Order Number: ">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="413.0" layoutY="172.0" text="Thneeds Ordered:">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="orderDetails" layoutX="414.0" layoutY="197.0" prefHeight="282.0" prefWidth="282.0">
+        <columns>
+          <TableColumn fx:id="tableColor" prefWidth="98.0" text="Color" />
+          <TableColumn fx:id="tableSize" prefWidth="96.0" text="Size" />
+            <TableColumn fx:id="tableQuantity" prefWidth="87.0" text="Quantity" />
+        </columns>
+      </TableView>
+      <Label fx:id="orderNum" layoutX="497.0" layoutY="139.0">
+         <font>
+            <Font name="Gill Sans MT Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="412.0" layoutY="503.0" text="Customer:">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="customerName" layoutX="475.0" layoutY="503.0">
+         <font>
+            <Font name="Gill Sans MT Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="413.0" layoutY="538.0" text="Order Date:">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="orderDate" layoutX="486.0" layoutY="538.0">
+         <font>
+            <Font name="Gill Sans MT Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="413.0" layoutY="572.0" text="Filled Date:">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="filledDate" layoutX="480.0" layoutY="567.0" prefHeight="25.0" prefWidth="95.0" />
+      <Button fx:id="viewCustomerButton" layoutX="444.0" layoutY="608.0" mnemonicParsing="false" onAction="#viewCustomerDetails" prefHeight="25.0" prefWidth="102.0" text="View Customer" />
+      <Button fx:id="editFilledDateButton" layoutX="569.0" layoutY="608.0" mnemonicParsing="false" text="Edit Filled Date" />
+   </children>
+</AnchorPane>

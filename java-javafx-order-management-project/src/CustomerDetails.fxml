@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="viewCustomerPane" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CustomerDetailsController">
+   <children>
+      <Label layoutX="21.0" layoutY="9.0" text="Customer Number: " textFill="#33579e">
+         <font>
+            <Font name="Dubai Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="viewCustomerNum" layoutX="218.0" layoutY="9.0" textFill="#33579e">
+         <font>
+            <Font name="Dubai Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="56.0" text="Full Name:">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="94.0" text="Address:">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="124.0" text="City:">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="155.0" text="State:">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="185.0" text="Zip Code:">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="224.0" text="Phone Number:">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="viewCustomerName" layoutX="85.0" layoutY="56.0">
+         <font>
+            <Font name="Gill Sans MT Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="viewAddress" layoutX="78.0" layoutY="94.0">
+         <font>
+            <Font name="Gill Sans MT Italic" size="12.0" />
+         </font>
+      </Label>
+      <Line endX="158.0" layoutX="122.0" layoutY="83.0" startX="-100.0" stroke="#00000040" />
+      <Label fx:id="viewCity" layoutX="56.0" layoutY="124.0">
+         <font>
+            <Font name="Gill Sans MT Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="viewZipCode" layoutX="83.0" layoutY="185.0">
+         <font>
+            <Font name="Gill Sans MT Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="viewState" layoutX="61.0" layoutY="155.0">
+         <font>
+            <Font name="Gill Sans MT Italic" size="12.0" />
+         </font>
+      </Label>
+      <Line endX="158.0" layoutX="122.0" layoutY="212.0" startX="-100.0" stroke="#00000040" />
+      <Label fx:id="viewPhoneNumber" layoutX="112.0" layoutY="224.0">
+         <font>
+            <Font name="Gill Sans MT Italic" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="21.0" layoutY="253.0" mnemonicParsing="false" onAction="#closeCustomerDetails" style="-fx-background-color: #3B6AA0; -fx-text-fill: white;" text="Back to Orders" />
+   </children>
+</AnchorPane>

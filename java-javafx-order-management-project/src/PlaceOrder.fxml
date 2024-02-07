@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="orderPane" prefHeight="676.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PlaceOrderController">
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="361.0">
+         <children>
+            <Label layoutX="14.0" layoutY="18.0" text="Order Number: " textFill="#33579e">
+               <font>
+                  <Font name="Dubai Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="74.0" text="Thneed Color:">
+               <font>
+                  <Font name="Gill Sans MT" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="142.0" text="Thneed Size:">
+               <font>
+                  <Font name="Gill Sans MT" size="12.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="smallSize" layoutX="14.0" layoutY="162.0" mnemonicParsing="false" selected="true" text="Small">
+               <toggleGroup>
+                  <ToggleGroup fx:id="sizeSelection" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="mediumSize" layoutX="92.0" layoutY="162.0" mnemonicParsing="false" text="Medium" toggleGroup="$sizeSelection" />
+            <RadioButton fx:id="largeSize" layoutX="183.0" layoutY="162.0" mnemonicParsing="false" text="Large" toggleGroup="$sizeSelection" />
+            <Label layoutX="14.0" layoutY="200.0" text="Quantity:">
+               <font>
+                  <Font name="Gill Sans MT" size="12.0" />
+               </font>
+            </Label>
+            <Slider fx:id="quantitySelection" layoutX="70.0" layoutY="201.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" prefHeight="38.0" prefWidth="220.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <Label layoutX="14.0" layoutY="234.0" text="Customer:">
+               <font>
+                  <Font name="Gill Sans MT" size="12.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="customerSelection" layoutX="14.0" layoutY="254.0" prefWidth="150.0" />
+            <Button fx:id="newCustomerButton" layoutX="192.0" layoutY="254.0" mnemonicParsing="false" onAction="#addNewCustomer" text="New Customer" />
+            <Label layoutX="14.0" layoutY="298.0" text="Order Date:">
+               <font>
+                  <Font name="Gill Sans MT" size="12.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="newOrderDate" layoutX="14.0" layoutY="318.0" prefHeight="25.0" prefWidth="150.0" />
+            <DatePicker fx:id="newFilledDate" layoutX="192.0" layoutY="318.0" prefWidth="150.0" />
+            <Label layoutX="192.0" layoutY="297.0" text="Filled Date:" />
+            <Button fx:id="addToOrderButton" layoutX="14.0" layoutY="362.0" mnemonicParsing="false" onAction="#addToOrder" style="-fx-background-color: #3B6AA0; -fx-text-fill: white;" text="Add to Order" />
+            <Button fx:id="clearEntryButton" layoutX="124.0" layoutY="362.0" mnemonicParsing="false" onAction="#clearMainOrderFields" text="Clear" />
+            <Line endX="257.5" layoutX="102.0" layoutY="410.0" startX="-102.0" stroke="#00000040" />
+            <Label layoutX="15.0" layoutY="419.0" text="Add More Thneeds to Order (Optional)" textFill="#33579e">
+               <font>
+                  <Font name="Dubai Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="454.0" text="Thneed Color:">
+               <font>
+                  <Font name="Gill Sans MT" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="521.0" text="Thneed Size:">
+               <font>
+                  <Font name="Gill Sans MT" size="12.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="smallSizeOptional" layoutX="15.0" layoutY="541.0" mnemonicParsing="false" selected="true" text="Small">
+               <toggleGroup>
+                  <ToggleGroup fx:id="sizeSelectionOptional" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="mediumSizeOptional" layoutX="93.0" layoutY="541.0" mnemonicParsing="false" text="Medium" toggleGroup="$sizeSelectionOptional" />
+            <RadioButton fx:id="largeSizeOptional" layoutX="184.0" layoutY="541.0" mnemonicParsing="false" text="Large" toggleGroup="$sizeSelectionOptional" />
+            <Label layoutX="15.0" layoutY="579.0" text="Quantity:">
+               <font>
+                  <Font name="Gill Sans MT" size="12.0" />
+               </font>
+            </Label>
+            <Slider fx:id="quantitySelectionOptional" layoutX="70.0" layoutY="580.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" prefHeight="14.0" prefWidth="220.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <ChoiceBox fx:id="colorSelectionOptional" layoutX="15.0" layoutY="474.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+      <Line endY="576.0" layoutX="360.0" layoutY="99.0" startY="-100.0" stroke="#00000040" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="471.0" layoutX="373.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.1" width="303.0" />
+      <Label layoutX="455.0" layoutY="97.0" text="Order Information" textFill="#33579e">
+         <font>
+            <Font name="Dubai Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="382.0" layoutY="140.0" text="Order Number: ">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="383.0" layoutY="173.0" text="Thneeds Ordered:">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="displayOrderDetails" layoutX="384.0" layoutY="197.0" prefHeight="207.0" prefWidth="282.0">
+        <columns>
+          <TableColumn fx:id="tableColor" prefWidth="98.0" text="Color" />
+          <TableColumn fx:id="tableSize" prefWidth="96.0" text="Size" />
+            <TableColumn fx:id="tableQuantity" prefWidth="87.0" text="Quantity" />
+        </columns>
+      </TableView>
+      <Label fx:id="displayOrderNum" layoutX="470.0" layoutY="140.0">
+         <font>
+            <Font name="Gill Sans MT Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="384.0" layoutY="429.0" text="Customer:">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="displayCustomerName" layoutX="446.0" layoutY="429.0">
+         <font>
+            <Font name="Gill Sans MT Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="384.0" layoutY="464.0" text="Order Date:">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="displayOrderDate" layoutX="454.0" layoutY="464.0">
+         <font>
+            <Font name="Gill Sans MT Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="385.0" layoutY="498.0" text="Filled Date:">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="finishOrderButton" layoutX="455.0" layoutY="525.0" mnemonicParsing="false" prefWidth="53.0" style="-fx-background-color: #3B6AA0; -fx-text-fill: white;" text="Finish" />
+      <Button fx:id="cancelOrderButton" layoutX="555.0" layoutY="525.0" mnemonicParsing="false" onAction="#clearOrder" text="Clear" />
+      <ChoiceBox fx:id="colorSelection" layoutX="14.0" layoutY="95.0" prefWidth="150.0" />
+      <Label fx:id="displayFilledDate" layoutX="450.0" layoutY="498.0">
+         <font>
+            <Font name="Gill Sans MT Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="defineOrderNum" layoutX="174.0" layoutY="18.0" textFill="#33579e">
+         <font>
+            <Font name="Dubai Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="addToOrderButtonOptional" layoutX="16.0" layoutY="629.0" mnemonicParsing="false" onAction="#addToOrderOptional" style="-fx-background-color: #3B6AA0; -fx-text-fill: white;" text="Add to Order" />
+      <Button fx:id="clearEntryOptional" layoutX="126.0" layoutY="629.0" mnemonicParsing="false" onAction="#clearOptionalOrderFields" text="Clear" />
+      <Label fx:id="notification" alignment="TOP_LEFT" layoutX="379.0" layoutY="575.0" prefHeight="75.0" prefWidth="292.0" textFill="RED" wrapText="true">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

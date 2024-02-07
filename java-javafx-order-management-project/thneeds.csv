@@ -1,0 +1,7 @@
+Customer_ID,Customer_Name,Address,City,State,Zip_Code,Phone_Number,Order_ID,Thneed_Orders,Order_Date,Filled_Date
+1,Josh Hatfield,123 IU St,Bloomington,IN,47408,3178001111,2,Red-Medium-2&Red-Medium-2,1/1/2023,2/30/2023
+2,Guru Kappa,456 Indiana Ave,Bloomington,IN,47408,8125001000,3,Green-Small-4,2/1/2023,NULL
+3,Ricky Qiu,789 Luddy Dr,Bloomington,IN,47408,8121234567,4,Green-Small-7,3/1/2023,NULL
+4,TJ Recarte,123 10th St,Bloomington,IN,47408,8122002000,5,Red-Medium-2&Green-Small-7,4/1/2023,5/7/2023
+5,Josh Hatfield,123 IU Street,Bloomington,IN,47408,3178001111,6,Red-Medium-2,5/1/2023,NULL
+6,Guru Kappa,456 Indiana Ave,Bloomington,IN,47408,8125001000,7,Green-Small-4&Green-Small-4&Black-Medium-10,5/5/2023,NULL
