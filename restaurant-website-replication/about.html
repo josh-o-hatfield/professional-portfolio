@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    This HTML page entails Project 4, containing a combination of HTML and CSS to replicate a website's about and
+    menu webpages. Both flexbox and media queries are utilized for setting flexible pages based on
+    viewport size.
+
+    @author     Josh Hatfield
+    @professor  Professor Lee
+    @course     INFO-I 360 (Section 8019) | Project 4
+    @date       4/5/2023
+
+    Redesign exercise based on the real-life
+    Brilliant Coffee Company in Bloomington, IN
+    https://brilliantcoffeeco.com/
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 4</title>
+    <!-- resets browser defaults -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- link to Font Awesome icon font -->
+    <script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ovo&display=swap" rel="stylesheet">
+    <!-- Google menu icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" >
+    <!-- Google social media icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" >
+    <!-- custom styles -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <p class="sr-only">This is a redesign exercise of a REAL place https://brilliantcoffeeco.com/ that you absolutely should visit and buy things from. It's delicious. You shall NOT post your redesign exercise on the internet (outside of submitting it on Canvas for this class) in any way shape or form. It is purely for your practice as part of an in-class assessment. If you do post it outside of class, we won't be able to have these kinds of real-world remakes anymore, so don't ruin it. Don't be the reason we cannot have nice things to practice our new skills with.</p>
+
+    <!-- Add navigation - two links - one for about and one for menu -->
+
+    <main id="home">
+        <div class="dots">
+            <div class="container">
+                <div class="navbar">
+                    <nav>
+                        <ul class="menu">
+                            <li class="menu-button"><span class="material-symbols-outlined">menu</span></li>
+                            <li class="menu-item"><a href="about.html">About</a></li>
+                            <li class="menu-item"><a href="menu.html">Menu</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <article>
+                    <img class="logo" src="images/logo.png" alt="logo">
+                    
+                    <h1>Brilliant Coffee</h1>
+                    
+                    <div class="home_h2">
+                        <h2>An artisan experience straight from Italy</h2>
+                    </div>
+                    
+                    <div class="boxes">
+                        <section class="line">
+                            <img src="images/gelato-flavors.jpg" alt="coffee and gelato">
+                            <h3>Coffee + Gelato = Pure Brilliance</h3>
+                            <p>Bold, rich espresso… velvety sweet and luscious gelato… there is nothing more brilliant than this combination! Our passion is to bring fresh and inspiring authenticity with the finest ingredients. Experience our Italian-style artisan gelato made with the utmost brilliance! Or, experience a new level in the art of coffee &mdash; that we roast in-house &mdash; with our newly designed coffee machine &mdash; the award winning TopBrewer by Scanomat from Denmark.</p>
+                        </section>
+                        <section class="line">
+                            <img src="images/coffee.jpg" alt="coffee">
+                            <h3>Coffee Reimagined</h3>
+                            <p>Bold, rich espresso… paired with luscious gelato, there is nothing more brilliant! We bring a whole new experience to the art of coffee. Our passion is to bring fresh and inspiring authenticity with the finest ingredients.</p>
+                        </section>
+                        <section class="line">
+                            <img src="images/gelato.jpg" alt="gelato">
+                            <h3>Velvety. Sweet. Genius.</h3>
+                            <p>We use the finest natural ingredients for our gelato. Imagine being in your own private, luxurious villa on the Italian countryside. Experience our Italian-style artisan gelato made with the utmost brilliance! </p>
+                        </section>
+                    </div>
+                </article>
+                <aside id="aside1">
+                    <h3 id="aside-header">Italian-style artisan gelato made with the utmost <em>brilliance.</em></h3>
+                </aside>
+                <footer class="footer1">
+                    <section>
+                        <h4>Bloomington Location:</h4>
+                        <address>217 W 6th Street<br>
+                        Bloomington, IN 47404</address>
+                    </section>
+                    <section>
+                        <h4>Hours:</h4>
+                        <p>Sunday-Wednesday<br>
+                        8:00am &mdash; 6:00pm</p>
+                        <p>Thursday-Saturday<br>
+                        8:00am &mdash; 8:00pm</p>
+                    </section>
+                    <section>
+                        <h4>Contact:</h4>
+                        <a href="mailto:brilliantcoffeeco@revvandstrum.com"><address>brilliantcoffeeco@revvandstrum.com</address></a>
+        
+                        <div class="social">
+                            <!-- Install and modify the icons -->
+                            <a href="https://www.facebook.com/brilliantcoffeeco/"><span class="material-symbols-outlined">heart_plus</span></a>
+                            <a href="https://www.instagram.com/brilliant_coffee_co/"><span class="material-symbols-outlined">swipe_right</span></a>
+                        </div>
+                    </section>
+                </footer>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script for Navigation - hides and reveals menu items on click -->
+    <script>
+        function toggleDropdown() {
+            document.querySelectorAll('.menu-item').forEach(item => item.classList.toggle('show'));
+        }
+        document.querySelector('.menu-button').addEventListener('click', toggleDropdown);
+    </script>
+</body>
+</html>

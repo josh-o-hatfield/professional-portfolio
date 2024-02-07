@@ -1,0 +1,478 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  NATURAL BOX MODEL
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  UTILITIES 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* hides an element on screen, but not from screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  COLORS
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Will create a warning in the W3C CSS validator */
+/* Ignore that - CSS variables are fine to use */
+:root {
+  --slategrey: #434B63;
+  --peach: #FFDBBA;
+  --coral: #F27935;
+  --turquoise: #4ECDC4;
+  --cream: #fef9ed;
+  --grey: #6C7A89;
+  --red: #f2354f;
+}
+
+body {
+  background: black;
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  TYPOGRAPHY & LINKS 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* font-family: 'Ovo', serif; */
+/* font-family: 'Montserrat', sans-serif; */
+/* links are coral / peach  */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ovo', serif;
+}
+p, figcaption, li, address  {
+  font-family: 'Montserrat', sans-serif;
+}
+/* links are coral / peach  */
+a:link, a:visited {
+  color: var(--coral);
+}
+a:hover, a:active {
+  color: var(--peach);
+}
+
+body {
+  background-color: gainsboro;
+}
+
+/* General settings used for Google icons */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 48
+}
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  /* from Bootstrap 5 */
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  HOME & BASE STRUCTURE
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Set the background to counter.jpg */
+#home {
+  /* Background image set below with media queries */
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  /* Prevents background image scrolling */
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.dots {
+  /* This sets a second background - because it's generated we can't use the multiple bkgs technique from Project 2 */
+  /* http://www.patternify.com/ */
+  /* Background set with media queries */
+  background-position: top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.container {
+  /* Needs an initial width of 100% due to mobile viewport */
+  width: 100%;
+  /* Background color set to a gradient between turquoise and slategrey */
+  background: linear-gradient(180deg, var(--turquoise) 0%, var(--slategrey) 50%);
+  /* Need flex options for footer to display three wide on larger viewports */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  overflow: auto;
+}
+.logo {
+  width: 220px;
+  /* Centers logo on each page */
+  margin: auto auto;
+  /* Needed due to navbar spacing, pushing logo further down */
+  margin-top: -100px;
+}
+/* article {
+  
+} */
+#home article {
+  position: relative;
+  justify-content: center;
+}
+#menu article {
+  /* Centers all text on the menu above the tables */
+  text-align: center;
+}
+
+/* TODO: Style the typography for #home  */
+#home h1 {
+  color: var(--cream);
+  text-align: center;
+  /* Font size of restaurant name on mobile viewport */
+  font-size: 48px;
+  /* Margins to bring closer to logo and H2 pull catch phrase closer */
+  margin-top: 20px;
+  margin-bottom: -12px;
+}
+
+#home h2 {
+  color: var(--peach);
+  text-align: center;
+  font-style: italic;
+  /* Font size of catch phrase on mobile viewport */
+  font-size: 22px;
+  /* Margins on mobile viewport so that text wrapping is more accentuated */
+  margin: 22px 20px 34px 20px;
+}
+
+#home h3 {
+  color: var(--cream);
+  /* Font size of subheaders on mobile viewport */
+  font-size: 24px;
+  /* Margin for making paragraph text closer to subheaders */
+  margin-bottom: -5px;
+}
+
+/* Decorative box */
+.line {
+  border: 1px dashed var(--cream);
+  /* Margins on mobile viewport so that it does not reach container sides */
+  margin: 0 50px 20px 50px;
+  /* Padding for images and paragraphs inside the lines */
+  padding: 20px;
+}
+
+.line p {
+  /* Font size for paragraphs inside lines on mobile viewport */
+  font-size: 18px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  ASIDE
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* TODO: style the aside and any typography you need for aside */
+#aside1 {
+  background-color: var(--cream);
+  width: 100%;
+  /* Different padding and margins needed based on About and Menu pages */
+  padding: 20px 100px 50px 100px;
+  margin: 25px 0 30px 0;
+}
+
+#aside2 {
+  background-color: var(--cream);
+  width: 100%;
+  /* Different padding and margins needed based on About and Menu pages */
+  padding: 20px 50px 20px 50px;
+  margin: 50px 0 50px 0;
+}
+
+#aside-header {
+  /* Font styling and centering */
+  color: var(--coral) !important;
+  text-align: center;
+  font-size: 26px;
+}
+
+#aside-header2 {
+  /* Font styling and centering */
+  color: var(--coral) !important;
+  text-align: center;
+  font-size: 26px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  MENU PAGE
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* TODO: Override any styles you need to from #home */
+/* Use #menu before the selectors if they repeat from #home */
+/* Use the class name if there is a class set */
+#menu {
+  /* Background color set to a gradient between grey and slategrey */
+  background: linear-gradient(180deg, var(--grey) 0%, var(--slategrey) 50%);
+  /* Margin needed due to white space at the bottom? */
+  margin-bottom: -20px;
+}
+/* TODO: style the rest of the elements and typography for the menu page */
+#menu h1 {
+  color: var(--peach);
+  text-align: center;
+  /* Font size for main header on mobile viewport */
+  font-size: 48px;
+  /* Add more space between main header and first flexbox with sizes */
+  margin-top: 30px;
+}
+
+.sizes {
+  border-width: 3px;
+  border-style: solid;
+  /* Alternative since I was not able to replicate the border shadow in example image */
+  border-image: linear-gradient(45deg, var(--peach), var(--grey)) 10;
+  color: var(--peach);
+
+  /* Centers items */
+  margin: auto;
+  /* Preset width which remains the same until a larger viewport */
+  width: 375px;
+  /* Needs to be a flexbox so that items wrap to new line on smaller viewports */
+  display: flex;
+  flex-flow: row wrap;
+  /* Adds space between items inside box */
+  justify-content: space-between;
+  /* Left and right padding inside border */
+  padding: 0 100px 0 100px;
+  margin-bottom: 20px;
+}
+
+#menu section h2 {
+  /* Changed to center headers inside boxes */
+  display: inline-block;
+  border-width: 3px;
+  border-style: solid;
+  /* Alternative since I was not able to replicate the border shadow in example image */
+  border-image: linear-gradient(45deg, var(--peach), var(--grey)) 10;
+  color: var(--peach);
+  font-style: italic;
+  /* Centers headers */
+  margin: 0 auto;
+  /* Padding for headers inside boxes */
+  padding: 20px 40px 20px 40px;
+  /* Top and bottom margins */
+  margin: 20px 0 10px 0;
+}
+
+#menu small {
+  /* Changed to add additional bottom margin with small paragraph text */
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+/* Padding so that items wrap on smaller viewports */
+.ingredients p {
+  color: var(--peach);
+  padding: 0 40px 0 40px;
+}
+
+.coffees {
+  /* Changed to be able to center tables */
+  display: inline-block;
+  color: var(--peach);
+  /* Keeps text left aligned even though tables are centered */
+  text-align: left;
+    /* Preset width which remains the same until a larger viewport */
+  width: 300px;
+  /* Centers tables */
+  margin: 0 auto;
+}
+
+table {
+  margin-top: 20px;
+}
+
+td {
+  /* Padding between table items to add space between rows and columns */
+  padding: 0 10px 5px 10px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  NAVIGATION 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* TODO: Add mobile-friendly navigation to the upper-right corner of the window */
+/* Utilized from in-class navigation example */
+nav {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: var(--cream);
+}
+.navbar {
+  width: 100%;
+  margin-top: 0;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+nav li {
+  list-style-type: none;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.menu-button span {
+  font-size: 48px;
+}
+.menu-button:hover {
+  color: var(--coral);
+  cursor: pointer;
+}
+
+.menu-item {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+  margin-top: -10px;
+  /* Puts menu item ranking above logn in instance of smaller viewports */
+  z-index: 100;
+}
+.menu-item a:hover {
+  color: var(--coral);
+}
+.menu-item a {
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.6rem 1.2rem 0.4rem 1.0rem;
+}
+
+/* referenced in JS */
+.show {
+  /* using a transition, so display: none; as used in class won't work */
+  visibility: visible;
+  opacity: 1;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  FOOTER
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Style the footer */
+.footer1 {
+  color: var(--cream);
+  /* Right, bottom, and left margins (Right margin used for About footer) */
+  margin: 0 50px 20px 50px;
+}
+/* TODO: style the rest of the About page footer */
+.footer1 h4 {
+  /* Font size for footer headers on mobile viewport */
+  font-size: 20px;
+  /* Adds spacing to top and bottom of footers */
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+
+/* Heart symbol from Google icons */
+.footer1 span {  
+  margin-top: 10px;
+  background-color: var(--coral);
+  color: var(--cream);
+  padding: 5px;
+  margin: 16px 8px 80px 0;
+}
+
+.footer2 {
+  color: var(--cream);
+  /* Bottom and left margins */
+  margin: 0 0 20px 50px;
+}
+/* TODO: style the rest of the Menu page footer */
+.footer2 h4 {
+  /* Font size for footer headers on mobile viewport */
+  font-size: 20px;
+  /* Adds spacing to top and bottom of footers */
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+
+/* Swipe symbol from Google icons */
+.footer2 span {  
+  margin-top: 10px;
+  background-color: var(--coral);
+  color: var(--cream);
+  padding: 5px;
+  margin: 16px 8px 80px 0;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  /* Background image (counter.jpg) initialized for this and higher viewports */
+  #home {background-image: url('../images/counter.jpg'); background-size: cover; background-position: top;}
+  /* Background image (dots) initialized for this and higher viewports */
+  /* background-attachment: fixed; needed to be applied here to work */
+  .dots {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAJUlEQVQYV2NkYGBIY4CAWVAaTDHik0BWCGeDdCADuLFES8B1AwBXcgQHq6hTZwAAAABJRU5ErkJggg==) repeat; background-attachment: fixed;}
+  /* Floats container to the right with decreased width on higher viewports */
+  .container {float: right; width: 40%; overflow: hidden;}
+  /* Decreases logo size due to smaller container */
+  .logo {width: 150px; height: auto;}
+  /* Decreases font size of main header due to smaller container */
+  #home h1 {font-size: 40px;}
+  /* Decreases font size and increases padding of catch phrase header due to smaller container */
+  #home h2 {font-size: 24px; word-break: break-word; padding: 0 25px 0 25px;}
+  /* Increases padding of aside container due to smaller overall container size */
+  #aside2 {padding: 20px 20px 20px 20px;}
+  /* Increases the set width for this and larger viewports */
+  .sizes {width: 500px; padding: 0 60px 0 60px;}
+  /* Breaks any works on the footer that overflow padding */
+  .footer1 {word-break: break-word;}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {float: right; width: 40%;}
+  /* Pushes the Menu page footer to three wide columns and establishes column gap */
+  .footer2 {display: flex; flex-flow: column wrap; column-gap: 50px;}
+  /* Pushes the tables to two columns and establishes column gap as well as new div width */
+  .coffees {display: flex; flex-flow: column wrap; column-gap: 30px; width: 600px;}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Increases the font size of the aside container to match example */
+  #aside-header2 {font-size: 32px;}
+}
+
+/* Extra large devices (large desktops, 1454px and up) */
+@media (min-width: 1454px) {
+  /* Pushes the About page footer to three wide columns and establishes column gap */
+  .footer1 {display: flex; flex-flow: column wrap; column-gap: 50px;}
+  /* Breaks footer headers that may overflow */
+  .footer1 h4 {word-break: break-word;}
+}
